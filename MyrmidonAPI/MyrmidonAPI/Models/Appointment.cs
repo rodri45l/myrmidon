@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿namespace MyrmidonAPI.Models;
 
-namespace MyrmidonAPI.Entities;
-
-public partial class Appointment
+public class Appointment
 {
     public int AppointmentId { get; set; }
 

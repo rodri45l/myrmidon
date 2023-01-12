@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿namespace MyrmidonAPI.Models;
 
-namespace MyrmidonAPI.Entities;
-
-public partial class Tension
+public class Tension
 {
     public int TensionId { get; set; }
 

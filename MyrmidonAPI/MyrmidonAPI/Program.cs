@@ -1,5 +1,5 @@
+
 using Microsoft.EntityFrameworkCore;
-using MyrmidonAPI.Entities;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,18 +10,13 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-
-
+builder.Services.AddScoped<IUserService, UserService>();
 
 builder.Services.AddDbContext<MyrmidonContext>(options =>
 {
-    var connetionString = builder.Configuration.GetConnectionString("MyrmidonApiConnectionString");
-    options.UseMySql(connetionString, ServerVersion.AutoDetect(connetionString));
+    var connectionString = builder.Configuration.GetConnectionString("MyrmidonApiConnectionString");
+    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
 });
-
-
-
 
 
 var app = builder.Build();

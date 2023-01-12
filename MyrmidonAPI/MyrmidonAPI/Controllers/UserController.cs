@@ -1,71 +1,51 @@
-using BCrypt.Net;
-using Microsoft.AspNetCore.Http.Extensions;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-//using MyrmidonAPI.Data;
-using MyrmidonAPI.Entities;
 
 namespace MyrmidonAPI.Controllers;
+
 [ApiController]
 [Route("api/[controller]")]
 public class UserController : Controller
 {
-    private readonly MyrmidonContext _dbContext;
+    // private readonly MyrmidonContext _dbContext;
+    private readonly IUserService _userService;
 
-    public UserController(MyrmidonContext dbContext)
+    public UserController( /*MyrmidonContext dbContext,*/ IUserService userService)
     {
-        this._dbContext = dbContext;
+        _userService = userService;
+        // _dbContext = dbContext;
     }
-    
-    [HttpGet("{userId}")]
+
+    [HttpGet("{userId:guid}")]
     public async Task<IActionResult> GetUser(Guid userId)
     {
-        var user = await _dbContext.Users.FindAsync(userId);
-        if (user == null)
-        {
-            return NotFound();
-        }
-        return Ok(user);
+        var serviceResponse = await _userService.GetUser(userId);
+        
+        if (!serviceResponse.Success) return NotFound();
+
+        return Ok(serviceResponse.Data);
     }
-    
+
     // Post
     [HttpPost]
-    public async Task<IActionResult> RegisterUser(AddLoginRequest addLoginRequest)
+    public async Task<IActionResult> RegisterUser(AddUserDto addUserDto)
     {
-        var user = new User()
-        {
-            UserId = Guid.NewGuid(),
-            Name = addLoginRequest.Name,
-            Surname = addLoginRequest.Surname,
-            BirthDate = addLoginRequest.BirthDate,
-            PostalCode = addLoginRequest.PostalCode,
-            Email = addLoginRequest.Email, //to do : validate email input
-            Address = addLoginRequest.Address,
-            Phone = addLoginRequest.Phone,
-            Sex = addLoginRequest.Sex, // True female, False for male
-            Gender = addLoginRequest.Gender, // to do : enum for gender options? or set it on the gui.
-            Password = BCrypt.Net.BCrypt.HashPassword(addLoginRequest.Password)
-        };
-        await _dbContext.Users.AddAsync(user);
         try
         {
-            await _dbContext.SaveChangesAsync();
-            var newUser = await _dbContext.Users.FindAsync(user.UserId);
-            var location = new Uri(Request.GetEncodedUrl().ToString() + "/" + newUser.UserId);
+            var serviceResponse = await _userService.AddUser(addUserDto, Request);
+            if (serviceResponse.Data == null) return BadRequest("An error occurred while saving the entity changes.");
+            var (location, newUser) = serviceResponse.Data;
             return Created(location, newUser);
+
+
+
         }
-        catch (DbUpdateException ex )
+        catch (DbUpdateException ex)
         {
-            if (ex.InnerException.Message.Contains("Duplicate entry"))
-            {
+            if (ex.InnerException != null && ex.InnerException.Message.Contains("Duplicate entry"))
                 return Conflict("Email already exists");
-            }
 
             return BadRequest("An error occurred while saving the entity changes.");
         }
-
-
-
     }
 }

@@ -1,7 +1,6 @@
-﻿
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
-namespace MyrmidonAPI.Entities;
+namespace MyrmidonAPI.Models;
 
 public partial class MyrmidonContext : DbContext
 {
@@ -33,8 +32,9 @@ public partial class MyrmidonContext : DbContext
     public virtual DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseMySql("server=localhost;port=3306;database=myrmidon;user=myrmidon_admin;password=Icaro45z", ServerVersion.Parse("10.9.4-mariadb"));
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https: //go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseMySql("server=localhost;port=3306;database=myrmidon;user=myrmidon_admin;password=Icaro45z",
+            ServerVersion.Parse("10.9.4-mariadb"));
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

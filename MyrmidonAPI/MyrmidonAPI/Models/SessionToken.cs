@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿namespace MyrmidonAPI.Models;
 
-namespace MyrmidonAPI.Entities;
-
-public partial class SessionToken
+public class SessionToken
 {
     public Guid TokenId { get; set; }
 

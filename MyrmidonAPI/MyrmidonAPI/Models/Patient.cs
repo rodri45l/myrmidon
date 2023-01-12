@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿namespace MyrmidonAPI.Models;
 
-namespace MyrmidonAPI.Entities;
-
-public partial class Patient
+public class Patient
 {
     public Guid PatientId { get; set; }
 

@@ -1,8 +1,7 @@
-namespace MyrmidonAPI.Entities;
+namespace MyrmidonAPI.Dtos.User;
 
-public class AddLoginRequest
+public class GetUserDto
 {
-
     public string Name { get; set; } = null!;
 
     public string Surname { get; set; } = null!;
@@ -21,7 +20,7 @@ public class AddLoginRequest
 
     public string? Gender { get; set; }
 
-    public string? Password { get; set; }
-    
-    
+    public string UserType { get; set; } = null!;
+
+   
 }

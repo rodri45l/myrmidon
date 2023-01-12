@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿namespace MyrmidonAPI.Models;
 
-namespace MyrmidonAPI.Entities;
-
-public partial class User
+public class User
 {
     public Guid UserId { get; set; }
 
@@ -26,7 +23,7 @@ public partial class User
     public string? Gender { get; set; }
 
     public string? Password { get; set; }
-    
+
 
     public string UserType { get; set; } = null!;
 
