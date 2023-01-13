@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Http.Extensions;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace MyrmidonAPI.Services.UserService;
@@ -16,36 +18,35 @@ public class UserService : IUserService
         _mapper = mapper;
     }
 
-    public async Task<ServiceResponse<Tuple<Uri, GetUserDto>>> AddUser(AddUserDto addUserDto, HttpRequest request)
+    public async Task<ServiceResponse<Tuple<Uri, GetUserDto>>> AddUser(AddUserDto addUserDto)
     {
         var serviceResponse = new ServiceResponse<Tuple<Uri, GetUserDto>>();
 
         var user = _mapper.Map<User>(addUserDto);
-        /*var user = new User
-        {
-            UserId = Guid.NewGuid(),
-            Name = addUserDto.Name,
-            Surname = addUserDto.Surname,
-            BirthDate = addUserDto.BirthDate,
-            PostalCode = addUserDto.PostalCode,
-            Email = addUserDto.Email, //to do : validate email input
-            Address = addUserDto.Address,
-            Phone = addUserDto.Phone,
-            Sex = addUserDto.Sex, // True female, False for male
-            Gender = addUserDto.Gender, // to do : enum for gender options? or set it on the gui.
-            Password = BCrypt.Net.BCrypt.HashPassword(addUserDto.Password)
-        };*/
+        
         await _dbContext.Users.AddAsync(user);
         await _dbContext.SaveChangesAsync();
 
-        var location = new Uri(request.GetEncodedUrl() + "/" + user.UserId);
+        var uriString =  "https://example.com/users/{user.UserId}";
+        try{
+            Uri uri = new Uri(uriString);
+            var getUserDto = _mapper.Map<GetUserDto>(user);
+            serviceResponse.Data = Tuple.Create(uri, getUserDto);
+            return serviceResponse;
+            
+        }
+        catch(UriFormatException e)
+        {
+            serviceResponse.Success = false;
+            return serviceResponse;
+        }
 
-        var getUserDto = _mapper.Map<GetUserDto>(user);
+            
 
-        serviceResponse.Data = Tuple.Create(location, getUserDto);
+        
 
 
-        return serviceResponse;
+        
     }
 
 
@@ -64,5 +65,28 @@ public class UserService : IUserService
         serviceResponse.Data = _mapper.Map<GetUserDto>(user);
 
         return serviceResponse;
+    }
+
+    public async Task<ServiceResponse<IActionResult>> DeleteUser(Guid userId)
+    {
+        var user = await _dbContext.Users.FirstOrDefaultAsync(u => u.UserId == userId);
+        if (user == null)
+        {
+            return new ServiceResponse<IActionResult>
+            {
+                Success = false
+
+            };
+        }
+
+        _dbContext.Users.Remove(user);
+        await _dbContext.SaveChangesAsync();
+
+        return new ServiceResponse<IActionResult>
+        {
+            Success = true,
+            Message = "User deleted."
+            
+        };
     }
 }

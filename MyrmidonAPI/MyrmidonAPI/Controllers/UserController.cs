@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 namespace MyrmidonAPI.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/[controller]/[action]")]
 public class UserController : Controller
 {
     // private readonly MyrmidonContext _dbContext;
@@ -32,7 +32,7 @@ public class UserController : Controller
     {
         try
         {
-            var serviceResponse = await _userService.AddUser(addUserDto, Request);
+            var serviceResponse = await _userService.AddUser(addUserDto);
             if (serviceResponse.Data == null) return BadRequest("An error occurred while saving the entity changes.");
             var (location, newUser) = serviceResponse.Data;
             return Created(location, newUser);
@@ -47,5 +47,15 @@ public class UserController : Controller
 
             return BadRequest("An error occurred while saving the entity changes.");
         }
+    }
+    
+    [HttpDelete("{userId:guid}")]
+    public async Task<IActionResult> DeleteUser(Guid userId)
+    {
+        var serviceResponse = await _userService.DeleteUser(userId);
+
+        if (!serviceResponse.Success) return NotFound();
+
+        return Ok();
     }
 }
