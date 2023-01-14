@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace MyrmidonAPI.Controllers;
 
@@ -20,7 +19,7 @@ public class UserController : Controller
     public async Task<IActionResult> GetUser(Guid userId)
     {
         var serviceResponse = await _userService.GetUser(userId);
-        
+
         if (!serviceResponse.Success) return NotFound();
 
         return Ok(serviceResponse.Data);
@@ -30,25 +29,13 @@ public class UserController : Controller
     [HttpPost]
     public async Task<IActionResult> RegisterUser(AddUserDto addUserDto)
     {
-        try
-        {
-            var serviceResponse = await _userService.AddUser(addUserDto);
-            if (serviceResponse.Data == null) return BadRequest("An error occurred while saving the entity changes.");
-            var (location, newUser) = serviceResponse.Data;
-            return Created(location, newUser);
-
-
-
-        }
-        catch (DbUpdateException ex)
-        {
-            if (ex.InnerException != null && ex.InnerException.Message.Contains("Duplicate entry"))
-                return Conflict("Email already exists");
-
-            return BadRequest("An error occurred while saving the entity changes.");
-        }
+        var serviceResponse = await _userService.AddUser(addUserDto);
+        if (serviceResponse.Success == false || serviceResponse.Data == null)
+            return BadRequest(serviceResponse.Message);
+        var (location, newUser) = serviceResponse.Data;
+        return Created(location, newUser);
     }
-    
+
     [HttpDelete("{userId:guid}")]
     public async Task<IActionResult> DeleteUser(Guid userId)
     {

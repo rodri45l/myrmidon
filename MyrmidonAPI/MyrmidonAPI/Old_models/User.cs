@@ -18,15 +18,16 @@ public class User
 
     public string Phone { get; set; } = null!;
 
-    public bool Sex { get; set; }
+    public bool Sex { get; set; } // True for female, False for male.
 
     public string? Gender { get; set; }
 
     public string? Password { get; set; }
 
+
     public string UserType { get; set; } = null!;
 
-    public bool Deleted { get; set; }
+    public bool Deleted { get; set; } // Default is false.
 
     public virtual ICollection<JournalEntry> JournalEntries { get; } = new List<JournalEntry>();
 

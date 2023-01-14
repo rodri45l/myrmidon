@@ -1,8 +1,7 @@
 namespace MyrmidonAPI.Dtos.User;
 
-public class GetUserDto
+public class UpdateUserDto
 {
-    public Guid UserId { get; set; }
     public string Name { get; set; } = null!;
 
     public string Surname { get; set; } = null!;
@@ -21,5 +20,5 @@ public class GetUserDto
 
     public string? Gender { get; set; }
 
-    public string UserType { get; set; } = null!;
+    public string? Password { get; set; }
 }
