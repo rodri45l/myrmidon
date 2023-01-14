@@ -33,13 +33,13 @@ public partial class MyrmidonContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https: //go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseMySql("server=localhost;port=3306;database=myrmidon;user=root;password=mmyrmidontest",
-            ServerVersion.Parse("8.0.31-mysql"));
+        => optionsBuilder.UseMySql("server=localhost;port=3306;database=myrmidon;user=myrmidon_admin;password=MyrmidonProject",
+            ServerVersion.Parse("10.9.4-mariadb"));
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder
-            .UseCollation("utf8mb4_0900_ai_ci")
+            .UseCollation("utf8mb4_unicode_ci")
             .HasCharSet("utf8mb4");
 
         modelBuilder.Entity<Appointment>(entity =>
@@ -48,7 +48,9 @@ public partial class MyrmidonContext : DbContext
 
             entity.ToTable("appointments");
 
-            entity.Property(e => e.AppointmentId).HasColumnName("appointment_id");
+            entity.Property(e => e.AppointmentId)
+                .HasColumnType("int(11)")
+                .HasColumnName("appointment_id");
             entity.Property(e => e.Date)
                 .HasColumnType("datetime")
                 .HasColumnName("date");
@@ -87,6 +89,7 @@ public partial class MyrmidonContext : DbContext
                 .HasColumnName("fact");
             entity.Property(e => e.FactId)
                 .ValueGeneratedOnAdd()
+                .HasColumnType("int(11)")
                 .HasColumnName("fact_id");
             entity.Property(e => e.LastShown)
                 .HasColumnType("datetime")
@@ -101,7 +104,9 @@ public partial class MyrmidonContext : DbContext
 
             entity.HasIndex(e => e.UserId, "user_id");
 
-            entity.Property(e => e.JournalEntryId).HasColumnName("journal_entry_id");
+            entity.Property(e => e.JournalEntryId)
+                .HasColumnType("int(11)")
+                .HasColumnName("journal_entry_id");
             entity.Property(e => e.Date)
                 .HasColumnType("datetime")
                 .HasColumnName("date");
@@ -124,11 +129,15 @@ public partial class MyrmidonContext : DbContext
 
             entity.HasIndex(e => e.UserId, "user_id");
 
-            entity.Property(e => e.MoodId).HasColumnName("mood_id");
+            entity.Property(e => e.MoodId)
+                .HasColumnType("int(11)")
+                .HasColumnName("mood_id");
             entity.Property(e => e.Date)
                 .HasColumnType("datetime")
                 .HasColumnName("date");
-            entity.Property(e => e.Rating).HasColumnName("rating");
+            entity.Property(e => e.Rating)
+                .HasColumnType("int(11)")
+                .HasColumnName("rating");
             entity.Property(e => e.UserId).HasColumnName("user_id");
 
             entity.HasOne(d => d.User).WithMany(p => p.Moods)
@@ -186,6 +195,8 @@ public partial class MyrmidonContext : DbContext
 
             entity.Property(e => e.TokenId).HasColumnName("token_id");
             entity.Property(e => e.ExpirationTime)
+                .ValueGeneratedOnAddOrUpdate()
+                .HasDefaultValueSql("current_timestamp()")
                 .HasColumnType("timestamp")
                 .HasColumnName("expiration_time");
             entity.Property(e => e.IpAddress)
@@ -207,11 +218,15 @@ public partial class MyrmidonContext : DbContext
 
             entity.HasIndex(e => e.UserId, "user_id");
 
-            entity.Property(e => e.TensionId).HasColumnName("tension_id");
+            entity.Property(e => e.TensionId)
+                .HasColumnType("int(11)")
+                .HasColumnName("tension_id");
             entity.Property(e => e.Date)
                 .HasColumnType("datetime")
                 .HasColumnName("date");
-            entity.Property(e => e.Rating).HasColumnName("rating");
+            entity.Property(e => e.Rating)
+                .HasColumnType("int(11)")
+                .HasColumnName("rating");
             entity.Property(e => e.UserId).HasColumnName("user_id");
 
             entity.HasOne(d => d.User).WithMany(p => p.Tensions)
@@ -253,7 +268,6 @@ public partial class MyrmidonContext : DbContext
             entity.Property(e => e.BirthDate)
                 .HasColumnType("datetime")
                 .HasColumnName("birth_date");
-            entity.Property(e => e.Deleted).HasColumnName("deleted");
             entity.Property(e => e.Email)
                 .HasMaxLength(320)
                 .HasColumnName("email");

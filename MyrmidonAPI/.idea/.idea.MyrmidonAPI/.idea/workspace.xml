@@ -5,7 +5,26 @@
     <projectFile profileName="https">MyrmidonAPI/MyrmidonAPI.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a0a6cf6-88ef-4a62-9102-83f74efe9a4e" name="Changes" comment="" />
+    <list default="true" id="9a0a6cf6-88ef-4a62-9102-83f74efe9a4e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/MyrmidonAPI/Dtos/User/UpdateUserDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyrmidonAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyrmidonAPI/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/MyrmidonAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/MyrmidonAPI.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Services/UserService/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Services/UserService/IUserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/staticwebassets/msbuild.build.MyrmidonAPI.props" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/staticwebassets/msbuild.build.MyrmidonAPI.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.MyrmidonAPI.props" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.MyrmidonAPI.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.MyrmidonAPI.props" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.MyrmidonAPI.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/TestMyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/TestMyrmidonAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/TestMyrmidonAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/TestMyrmidonAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.pdb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,7 +55,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/MyrmidonAPI.csproj&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;RiderDotCoverFilteringPageId&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -91,6 +110,8 @@
       <workItem from="1673515551687" duration="20248000" />
       <workItem from="1673547385371" duration="9373000" />
       <workItem from="1673607963905" duration="15211000" />
+      <workItem from="1673644516218" duration="9804000" />
+      <workItem from="1673698192149" duration="16748000" />
     </task>
     <task id="LOCAL-00001" summary="AutoMapper implemented">
       <created>1673557418627</created>
@@ -117,45 +138,80 @@
     <option name="coveragePercentColumnWidth" value="136" />
     <option name="sortOrder" value="DESCENDING" />
     <option name="sortedColumn" value="1" />
-    <option name="symbolColumnWidth" value="69" />
+    <option name="symbolColumnWidth" value="408" />
     <coverage-tree-state>
       <expand>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 64% 156/436" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 99% 1/73" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 64% 156/436" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 64% 156/436" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 99% 1/73" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 99% 1/73" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 64% 156/436" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 64% 156/436" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 67% 135/415" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 99% 1/73" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 99% 1/73" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 99% 1/73" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 64% 156/436" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 64% 156/436" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 67% 135/415" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Services.UserService 86% 6/42" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 99% 1/73" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 99% 1/73" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 99% 1/73" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Controllers 100% 0/23" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 64% 156/436" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 64% 156/436" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 67% 135/415" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Services.UserService 86% 6/42" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="UserService 86% 6/42" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 99% 1/73" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 99% 1/73" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 99% 1/73" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Controllers 100% 0/23" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="UserController 100% 0/23" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 64% 156/436" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 64% 156/436" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 67% 135/415" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Models 62% 104/276" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 99% 1/73" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 99% 1/73" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 99% 1/73" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Controllers 100% 0/23" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="UserController 100% 0/23" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="RegisterUser(AddUserDto) 100% 0/7" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 99% 1/73" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 99% 1/73" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 99% 1/73" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Controllers 100% 0/23" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="UserController 100% 0/23" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="DeleteUser(Guid) 100% 0/6" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 99% 1/73" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 99% 1/73" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 99% 1/73" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Services.UserService 98% 1/45" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 99% 1/73" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 99% 1/73" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 99% 1/73" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Services.UserService 98% 1/45" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="UserService 98% 1/45" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 99% 1/73" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 99% 1/73" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 99% 1/73" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Services.UserService 98% 1/45" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="UserService 98% 1/45" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="AddUser(AddUserDto) 95% 1/19" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
       </expand>
       <select />

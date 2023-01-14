@@ -1,5 +1,3 @@
-using Microsoft.AspNetCore.Http.Extensions;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -23,30 +21,29 @@ public class UserService : IUserService
         var serviceResponse = new ServiceResponse<Tuple<Uri, GetUserDto>>();
 
         var user = _mapper.Map<User>(addUserDto);
-        
-        await _dbContext.Users.AddAsync(user);
-        await _dbContext.SaveChangesAsync();
 
-        var uriString =  "https://example.com/users/{user.UserId}";
-        try{
-            Uri uri = new Uri(uriString);
+
+        var uriString = "https://example.com/users/{user.UserId}";
+        try
+        {
+            await _dbContext.Users.AddAsync(user);
+            await _dbContext.SaveChangesAsync();
+            var uri = new Uri(uriString);
             var getUserDto = _mapper.Map<GetUserDto>(user);
             serviceResponse.Data = Tuple.Create(uri, getUserDto);
             return serviceResponse;
-            
         }
-        catch(UriFormatException e)
+        catch (DbUpdateException ex)
         {
             serviceResponse.Success = false;
+            if (ex.InnerException != null && ex.InnerException.Message.Contains("Duplicate entry"))
+                serviceResponse.Message = "Email already exists";
+            else
+                serviceResponse.Message = "An error occurred while saving the entity changes.";
+
+
             return serviceResponse;
         }
-
-            
-
-        
-
-
-        
     }
 
 
@@ -54,7 +51,7 @@ public class UserService : IUserService
     {
         var serviceResponse = new ServiceResponse<GetUserDto>();
         var user = await _dbContext.Users.FirstOrDefaultAsync(u => u.UserId == userId);
-        if (user == null)
+        if (user == null || user.Deleted)
         {
             serviceResponse.Data = new GetUserDto();
             serviceResponse.Success = false;
@@ -70,23 +67,21 @@ public class UserService : IUserService
     public async Task<ServiceResponse<IActionResult>> DeleteUser(Guid userId)
     {
         var user = await _dbContext.Users.FirstOrDefaultAsync(u => u.UserId == userId);
-        if (user == null)
-        {
+        if (user == null || user.Deleted)
             return new ServiceResponse<IActionResult>
             {
                 Success = false
-
             };
-        }
 
-        _dbContext.Users.Remove(user);
+        user.Deleted = true;
+
+        _dbContext.Users.Update(user);
         await _dbContext.SaveChangesAsync();
 
         return new ServiceResponse<IActionResult>
         {
             Success = true,
             Message = "User deleted."
-            
         };
     }
 }
