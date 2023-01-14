@@ -21,6 +21,7 @@ public class UserService : IUserService
         var serviceResponse = new ServiceResponse<Tuple<Uri, GetUserDto>>();
 
         var user = _mapper.Map<User>(addUserDto);
+        user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
 
 
         var uriString = "https://example.com/users/{user.UserId}";
@@ -83,5 +84,35 @@ public class UserService : IUserService
             Success = true,
             Message = "User deleted."
         };
+    }
+
+    public async Task<ServiceResponse<IActionResult>> UpdateUser(UpdateUserDto updateUserDto)
+    {
+        var result = new ServiceResponse<IActionResult>();
+        var user = await _dbContext.Users.FirstOrDefaultAsync(u => u.UserId == updateUserDto.UserId);
+        if (user == null)
+        {
+            result.Success = false;
+            result.Message = "User doesn't exist";
+            result.Data = new NotFoundResult();
+            return result;
+        }
+
+        if (await _dbContext.Users.AnyAsync(u => u.Email == updateUserDto.Email && u.UserId != user.UserId))
+        {
+            result.Message = "Email already exists";
+            result.Success = false;
+            result.Data = new BadRequestObjectResult("Email already exists");
+            return result;
+        }
+        // set Password to null if user don't want to change it.
+
+        updateUserDto.Password = updateUserDto.Password != null ? BCrypt.Net.BCrypt.HashPassword(updateUserDto.Password) : user.Password;
+
+        _mapper.Map(updateUserDto, user);
+
+        await _dbContext.SaveChangesAsync();
+        result.Data = new OkResult();
+        return result;
     }
 }

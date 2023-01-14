@@ -45,4 +45,14 @@ public class UserController : Controller
 
         return Ok();
     }
+
+    [HttpPut]
+    public async Task<IActionResult> UpdateUser(UpdateUserDto updateUserDto)
+    {
+        var response = (ServiceResponse<IActionResult>)await _userService.UpdateUser(updateUserDto);
+        return response.Data!;
+    }
+
+
+
 }

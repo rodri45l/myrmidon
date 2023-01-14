@@ -9,5 +9,5 @@ public interface IUserService
 
     Task<ServiceResponse<IActionResult>> DeleteUser(Guid userId);
 
-   // Task<ServiceResponse<IActionResult>> UpdateUser(UpdateUserDto);
+    Task<ServiceResponse<IActionResult>> UpdateUser(UpdateUserDto updateUserDto);
 }
