@@ -49,10 +49,7 @@ public class UserController : Controller
     [HttpPut]
     public async Task<IActionResult> UpdateUser(UpdateUserDto updateUserDto)
     {
-        var response = (ServiceResponse<IActionResult>)await _userService.UpdateUser(updateUserDto);
+        var response = await _userService.UpdateUser(updateUserDto);
         return response.Data!;
     }
-
-
-
 }

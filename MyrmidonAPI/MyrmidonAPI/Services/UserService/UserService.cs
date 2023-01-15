@@ -107,7 +107,9 @@ public class UserService : IUserService
         }
         // set Password to null if user don't want to change it.
 
-        updateUserDto.Password = updateUserDto.Password != null ? BCrypt.Net.BCrypt.HashPassword(updateUserDto.Password) : user.Password;
+        updateUserDto.Password = updateUserDto.Password != null
+            ? BCrypt.Net.BCrypt.HashPassword(updateUserDto.Password)
+            : user.Password;
 
         _mapper.Map(updateUserDto, user);
 
