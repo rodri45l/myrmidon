@@ -1,4 +1,4 @@
-namespace MyrmidonAPI.Models;
+namespace MyrmidonAPI.Models.OtherModels;
 
 public class ServiceResponse<T>
 {

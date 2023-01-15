@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using MyrmidonAPI.Models.OtherModels;
 
 namespace MyrmidonAPI.Services.UserService;
 

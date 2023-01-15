@@ -45,3 +45,8 @@
 /home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/BCrypt.Net-Next.dll
 /home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/AutoMapper.dll
 /home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+/home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+/home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+/home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/Microsoft.Extensions.Identity.Core.dll
+/home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/Microsoft.Extensions.Identity.Stores.dll

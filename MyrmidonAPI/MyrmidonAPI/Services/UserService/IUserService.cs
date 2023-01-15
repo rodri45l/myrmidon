@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using MyrmidonAPI.Models.OtherModels;
 
 namespace MyrmidonAPI.Services.UserService;
 

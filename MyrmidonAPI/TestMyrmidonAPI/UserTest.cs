@@ -1,5 +1,4 @@
 using AutoMapper;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MyrmidonAPI;
@@ -13,10 +12,10 @@ namespace TestMyrmidonAPI;
 public class UserTest
 {
     private readonly UserController _controller;
-    private readonly MyrmidonContext _myrmidonContext;
-    private readonly IUserService _service;
     private readonly IMapper _mapper;
+    private readonly MyrmidonContext _myrmidonContext;
     private readonly string _password = "password";
+    private readonly IUserService _service;
 
 
     //  Constructor
@@ -160,7 +159,7 @@ public class UserTest
         if (createdResult.Value != null)
         {
             // We remove the user created, not sure if this is the proper way to handle stuff in my database.
-            
+
             var users = await _myrmidonContext.Users.Where(u => u.Email == newUser.Email).ToListAsync();
             _myrmidonContext.Users.RemoveRange(users);
             await _myrmidonContext.SaveChangesAsync();
@@ -198,19 +197,18 @@ public class UserTest
     {
         var user = await AddTestUser();
         var updateUser = new UpdateUserDto();
-        
+
         _mapper.Map(user, updateUser);
         updateUser.Password = _password;
-         var result = await _controller.UpdateUser(updateUser);
-         Assert.IsType<OkResult>(result);
-         await DeleteTestUser(user.UserId);
-         //Assert.True(true);
+        var result = await _controller.UpdateUser(updateUser);
+        Assert.IsType<OkResult>(result);
+        await DeleteTestUser(user.UserId);
+        //Assert.True(true);
     }
-    
+
     [Fact]
     public async Task UpdateUser_ShouldReturnNotFound()
     {
-
         var testUser = await AddTestUser();
         var updateUser = new UpdateUserDto();
         _mapper.Map(testUser, updateUser);
@@ -219,22 +217,21 @@ public class UserTest
         var result = await _controller.UpdateUser(updateUser);
         Assert.IsType<NotFoundResult>(result);
         await DeleteTestUser(testUser.UserId);
-        
     }
-    
+
     [Fact]
     public async Task UpdateUser_ShouldReturnBadRequest()
     {
         // Create first user
         var testUser = await AddTestUser();
         //save its UserId and change email.
-        
+
         var updateUser = new UpdateUserDto();
         _mapper.Map(testUser, updateUser);
         updateUser.Password = _password;
         updateUser.Email = "testEmail";
         await _controller.UpdateUser(updateUser);
-        
+
         var testUser2 = await AddTestUser();
         var updateUser2 = new UpdateUserDto();
         _mapper.Map(testUser2, updateUser2);
@@ -244,6 +241,5 @@ public class UserTest
         Assert.IsType<BadRequestObjectResult>(result);
         await DeleteTestUser(testUser.UserId);
         await DeleteTestUser(testUser2.UserId);
-
     }
 }
