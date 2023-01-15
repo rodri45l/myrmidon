@@ -5,7 +5,12 @@
     <projectFile profileName="https">MyrmidonAPI/MyrmidonAPI.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a0a6cf6-88ef-4a62-9102-83f74efe9a4e" name="Changes" comment="" />
+    <list default="true" id="9a0a6cf6-88ef-4a62-9102-83f74efe9a4e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyrmidonAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyrmidonAPI/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/obj/rider.project.restore.info" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,7 +97,9 @@
       <workItem from="1673547385371" duration="9373000" />
       <workItem from="1673607963905" duration="15211000" />
       <workItem from="1673644516218" duration="9804000" />
-      <workItem from="1673698192149" duration="27289000" />
+      <workItem from="1673698192149" duration="28862000" />
+      <workItem from="1673766373707" duration="674000" />
+      <workItem from="1673767061426" duration="6732000" />
     </task>
     <task id="LOCAL-00001" summary="AutoMapper implemented">
       <created>1673557418627</created>
@@ -124,84 +131,84 @@
       <expand>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 98% 2/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 0% 101/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 98% 2/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 98% 2/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 0% 101/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 0% 101/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 98% 2/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 98% 2/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 98% 2/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 0% 101/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 0% 101/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 0% 101/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 98% 2/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 98% 2/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 98% 2/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Controllers 100% 0/27" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 0% 101/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 0% 101/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 0% 101/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Services.UserService 0% 67/67" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 98% 2/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 98% 2/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 98% 2/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Controllers 100% 0/27" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="UserController 100% 0/27" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 0% 101/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 0% 101/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 0% 101/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Services.UserService 0% 67/67" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="UserService 0% 67/67" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 98% 2/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 98% 2/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 98% 2/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Controllers 100% 0/27" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="UserController 100% 0/27" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="RegisterUser(AddUserDto) 100% 0/7" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 0% 101/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 0% 101/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 0% 101/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Services.UserService 0% 67/67" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="UserService 0% 67/67" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="AddUser(AddUserDto) 0% 20/20" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 98% 2/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 98% 2/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 98% 2/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Controllers 100% 0/27" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="UserController 100% 0/27" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="DeleteUser(Guid) 100% 0/6" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 0% 101/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 0% 101/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 0% 101/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Services.UserService 0% 67/67" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="UserService 0% 67/67" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="UpdateUser(UpdateUserDto) 0% 21/21" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 98% 2/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 98% 2/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 98% 2/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Services.UserService 97% 2/67" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 0% 101/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 0% 101/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 0% 101/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Controllers 0% 27/27" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 98% 2/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 98% 2/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 98% 2/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Services.UserService 97% 2/67" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="UserService 97% 2/67" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 0% 101/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 0% 101/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 0% 101/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Controllers 0% 27/27" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="UserController 0% 27/27" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 98% 2/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 98% 2/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 98% 2/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Services.UserService 97% 2/67" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="UserService 97% 2/67" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="AddUser(AddUserDto) 95% 1/20" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 0% 101/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 0% 101/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 0% 101/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Controllers 0% 27/27" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="UserController 0% 27/27" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="RegisterUser(AddUserDto) 0% 7/7" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 98% 2/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 98% 2/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 98% 2/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Services.UserService 97% 2/67" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="UserService 97% 2/67" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="UpdateUser(UpdateUserDto) 95% 1/21" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 0% 101/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 0% 101/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 0% 101/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Controllers 0% 27/27" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="UserController 0% 27/27" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="DeleteUser(Guid) 0% 6/6" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
       </expand>
       <select />
