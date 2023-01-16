@@ -1,6 +1,9 @@
-﻿namespace MyrmidonAPI.Models;
+﻿using System;
+using System.Collections.Generic;
 
-public class Fact
+namespace MyrmidonAPI.Models;
+
+public partial class Fact
 {
     public int FactId { get; set; }
 

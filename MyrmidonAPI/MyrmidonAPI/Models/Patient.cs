@@ -1,12 +1,15 @@
-﻿namespace MyrmidonAPI.Models;
+﻿using System;
+using System.Collections.Generic;
 
-public class Patient
+namespace MyrmidonAPI.Models;
+
+public partial class Patient
 {
     public Guid PatientId { get; set; }
 
     public string? MedicalHistory { get; set; }
 
-    public Guid UserId { get; set; }
+    public Guid Id { get; set; }
 
     public virtual User User { get; set; } = null!;
 

@@ -1,6 +1,10 @@
-﻿namespace MyrmidonAPI.Models;
+﻿using System;
+using System.Collections.Generic;
 
-public class SessionToken
+/*
+namespace MyrmidonAPI.Models;
+
+public partial class SessionToken
 {
     public Guid TokenId { get; set; }
 
@@ -12,3 +16,4 @@ public class SessionToken
 
     public virtual User User { get; set; } = null!;
 }
+*/

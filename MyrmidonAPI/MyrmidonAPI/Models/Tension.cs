@@ -1,6 +1,9 @@
-﻿namespace MyrmidonAPI.Models;
+﻿using System;
+using System.Collections.Generic;
 
-public class Tension
+namespace MyrmidonAPI.Models;
+
+public partial class Tension
 {
     public int TensionId { get; set; }
 
@@ -8,7 +11,7 @@ public class Tension
 
     public DateTime Date { get; set; }
 
-    public Guid UserId { get; set; }
+    public Guid Id { get; set; }
 
     public virtual User User { get; set; } = null!;
 }

@@ -5,7 +5,13 @@
 /home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.runtimeconfig.json
 /home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.dll
 /home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.pdb
+/home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/AutoMapper.dll
+/home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/BCrypt.Net-Next.dll
 /home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/Humanizer.dll
+/home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+/home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+/home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 /home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/Microsoft.AspNetCore.OpenApi.dll
 /home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.dll
 /home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -13,6 +19,8 @@
 /home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.InMemory.dll
 /home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Relational.dll
 /home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
+/home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/Microsoft.Extensions.Identity.Core.dll
+/home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/Microsoft.Extensions.Identity.Stores.dll
 /home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/Microsoft.OpenApi.dll
 /home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/Mono.TextTemplating.dll
 /home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/MySqlConnector.dll
@@ -21,6 +29,7 @@
 /home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerUI.dll
 /home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/System.CodeDom.dll
+/home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/System.Security.Permissions.dll
 /home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.csproj.AssemblyReference.cache
 /home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.GeneratedMSBuildEditorConfig.editorconfig
 /home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.AssemblyInfoInputs.cache
@@ -42,11 +51,3 @@
 /home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.pdb
 /home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.genruntimeconfig.cache
 /home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/obj/Debug/net7.0/ref/MyrmidonAPI.dll
-/home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/BCrypt.Net-Next.dll
-/home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/AutoMapper.dll
-/home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-/home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/Microsoft.AspNetCore.Cryptography.Internal.dll
-/home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-/home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-/home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/Microsoft.Extensions.Identity.Core.dll
-/home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/bin/Debug/net7.0/Microsoft.Extensions.Identity.Stores.dll
