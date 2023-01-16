@@ -1,8 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace MyrmidonAPI.Models;
 
-public partial class MyrmidonContext : DbContext
+public partial class MyrmidonContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
 {
     public MyrmidonContext()
     {
@@ -23,7 +25,7 @@ public partial class MyrmidonContext : DbContext
 
     public virtual DbSet<Patient> Patients { get; set; }
 
-    public virtual DbSet<SessionToken> SessionTokens { get; set; }
+    // public virtual DbSet<SessionToken> SessionTokens { get; set; }
 
     public virtual DbSet<Tension> Tensions { get; set; }
 
@@ -38,6 +40,9 @@ public partial class MyrmidonContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        base.OnModelCreating(modelBuilder);
+        //modelBuilder.Entity<IdentityUserLogin<Guid>>().HasKey(x => x.Id);
+
         modelBuilder
             .UseCollation("utf8mb4_0900_ai_ci")
             .HasCharSet("utf8mb4");
@@ -60,7 +65,7 @@ public partial class MyrmidonContext : DbContext
                 .UsingEntity<Dictionary<string, object>>(
                     "AppointmentUser",
                     r => r.HasOne<User>().WithMany()
-                        .HasForeignKey("UserId")
+                        .HasForeignKey("Id")
                         .OnDelete(DeleteBehavior.ClientSetNull)
                         .HasConstraintName("AppointmentUsers_ibfk_2"),
                     l => l.HasOne<Appointment>().WithMany()
@@ -69,16 +74,16 @@ public partial class MyrmidonContext : DbContext
                         .HasConstraintName("AppointmentUsers_ibfk_1"),
                     j =>
                     {
-                        j.HasKey("AppointmentId", "UserId")
+                        j.HasKey("AppointmentId", "Id")
                             .HasName("PRIMARY")
                             .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
-                        j.HasIndex(new[] { "UserId" }, "user_id");
+                        j.HasIndex(new[] { "Id" }, "Id");
                     });
         });
 
         modelBuilder.Entity<Fact>(entity =>
         {
-            entity.HasKey(e => e.Fact1).HasName("PRIMARY");
+            entity.HasKey(e => e.FactId).HasName("PRIMARY");
 
             entity.HasIndex(e => e.FactId, "fact_id").IsUnique();
 
@@ -99,7 +104,7 @@ public partial class MyrmidonContext : DbContext
 
             entity.ToTable("Journal_entry");
 
-            entity.HasIndex(e => e.UserId, "user_id");
+            entity.HasIndex(e => e.Id, "Id");
 
             entity.Property(e => e.JournalEntryId).HasColumnName("journal_entry_id");
             entity.Property(e => e.Date)
@@ -108,10 +113,10 @@ public partial class MyrmidonContext : DbContext
             entity.Property(e => e.JournalEntry1)
                 .HasMaxLength(1000)
                 .HasColumnName("journal_entry");
-            entity.Property(e => e.UserId).HasColumnName("user_id");
+            entity.Property(e => e.Id).HasColumnName("Id");
 
             entity.HasOne(d => d.User).WithMany(p => p.JournalEntries)
-                .HasForeignKey(d => d.UserId)
+                .HasForeignKey(d => d.Id)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("Journal_entry_ibfk_1");
         });
@@ -122,17 +127,17 @@ public partial class MyrmidonContext : DbContext
 
             entity.ToTable("Mood");
 
-            entity.HasIndex(e => e.UserId, "user_id");
+            entity.HasIndex(e => e.Id, "Id");
 
             entity.Property(e => e.MoodId).HasColumnName("mood_id");
             entity.Property(e => e.Date)
                 .HasColumnType("datetime")
                 .HasColumnName("date");
             entity.Property(e => e.Rating).HasColumnName("rating");
-            entity.Property(e => e.UserId).HasColumnName("user_id");
+            entity.Property(e => e.Id).HasColumnName("Id");
 
             entity.HasOne(d => d.User).WithMany(p => p.Moods)
-                .HasForeignKey(d => d.UserId)
+                .HasForeignKey(d => d.Id)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("Mood_ibfk_1");
         });
@@ -143,16 +148,16 @@ public partial class MyrmidonContext : DbContext
 
             entity.ToTable("Patient");
 
-            entity.HasIndex(e => e.UserId, "user_id");
+            entity.HasIndex(e => e.Id, "Id");
 
             entity.Property(e => e.PatientId).HasColumnName("patient_id");
             entity.Property(e => e.MedicalHistory)
                 .HasMaxLength(1000)
                 .HasColumnName("medical_history");
-            entity.Property(e => e.UserId).HasColumnName("user_id");
+            entity.Property(e => e.Id).HasColumnName("Id");
 
             entity.HasOne(d => d.User).WithMany(p => p.Patients)
-                .HasForeignKey(d => d.UserId)
+                .HasForeignKey(d => d.Id)
                 .HasConstraintName("Patient_ibfk_1");
 
             entity.HasMany(d => d.Therapists).WithMany(p => p.Patients)
@@ -174,7 +179,7 @@ public partial class MyrmidonContext : DbContext
                     });
         });
 
-        modelBuilder.Entity<SessionToken>(entity =>
+        /*modelBuilder.Entity<SessionToken>(entity =>
         {
             entity.HasKey(e => e.TokenId).HasName("PRIMARY");
 
@@ -182,7 +187,7 @@ public partial class MyrmidonContext : DbContext
 
             entity.HasIndex(e => e.TokenId, "token_id").IsUnique();
 
-            entity.HasIndex(e => e.UserId, "user_id_idx").IsUnique();
+            entity.HasIndex(e => e.UserId, "userId");
 
             entity.Property(e => e.TokenId).HasColumnName("token_id");
             entity.Property(e => e.ExpirationTime)
@@ -191,13 +196,13 @@ public partial class MyrmidonContext : DbContext
             entity.Property(e => e.IpAddress)
                 .HasMaxLength(45)
                 .HasColumnName("ip_address");
-            entity.Property(e => e.UserId).HasColumnName("user_id");
+            entity.Property(e => e.UserId).HasColumnName("userId");
 
-            entity.HasOne(d => d.User).WithOne(p => p.SessionToken)
-                .HasForeignKey<SessionToken>(d => d.UserId)
+            entity.HasOne(d => d.User).WithMany(p => p.SessionTokens)
+                .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("session_tokens_ibfk_1");
-        });
+        });*/
 
         modelBuilder.Entity<Tension>(entity =>
         {
@@ -205,17 +210,17 @@ public partial class MyrmidonContext : DbContext
 
             entity.ToTable("Tension");
 
-            entity.HasIndex(e => e.UserId, "user_id");
+            entity.HasIndex(e => e.Id, "Id");
 
             entity.Property(e => e.TensionId).HasColumnName("tension_id");
             entity.Property(e => e.Date)
                 .HasColumnType("datetime")
                 .HasColumnName("date");
             entity.Property(e => e.Rating).HasColumnName("rating");
-            entity.Property(e => e.UserId).HasColumnName("user_id");
+            entity.Property(e => e.Id).HasColumnName("Id");
 
             entity.HasOne(d => d.User).WithMany(p => p.Tensions)
-                .HasForeignKey(d => d.UserId)
+                .HasForeignKey(d => d.Id)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("Tension_ibfk_1");
         });
@@ -226,27 +231,25 @@ public partial class MyrmidonContext : DbContext
 
             entity.ToTable("Therapist");
 
-            entity.HasIndex(e => e.UserId, "user_id");
+            entity.HasIndex(e => e.Id, "Id");
 
             entity.Property(e => e.TherapistId).HasColumnName("therapist_id");
-            entity.Property(e => e.UserId).HasColumnName("user_id");
+            entity.Property(e => e.Id).HasColumnName("Id");
 
             entity.HasOne(d => d.User).WithMany(p => p.Therapists)
-                .HasForeignKey(d => d.UserId)
+                .HasForeignKey(d => d.Id)
                 .HasConstraintName("Therapist_ibfk_1");
         });
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.UserId).HasName("PRIMARY");
+            entity.HasKey(e => e.Id).HasName("PRIMARY");
 
             entity.ToTable("User");
 
-            entity.HasIndex(e => e.Email, "email").IsUnique();
+            entity.HasIndex(e => e.Id, "Id").IsUnique();
 
-            entity.HasIndex(e => e.UserId, "user_id").IsUnique();
-
-            entity.Property(e => e.UserId).HasColumnName("user_id");
+            entity.Property(e => e.Id).HasColumnName("Id");
             entity.Property(e => e.Address)
                 .HasMaxLength(320)
                 .HasColumnName("address");
@@ -254,22 +257,12 @@ public partial class MyrmidonContext : DbContext
                 .HasColumnType("datetime")
                 .HasColumnName("birth_date");
             entity.Property(e => e.Deleted).HasColumnName("deleted");
-            entity.Property(e => e.Email)
-                .HasMaxLength(320)
-                .HasColumnName("email");
             entity.Property(e => e.Gender)
                 .HasMaxLength(20)
                 .HasColumnName("gender");
             entity.Property(e => e.Name)
                 .HasMaxLength(100)
                 .HasColumnName("name");
-            entity.Property(e => e.Password)
-                .HasMaxLength(255)
-                .HasColumnName("password")
-                .UseCollation("utf8mb4_bin");
-            entity.Property(e => e.Phone)
-                .HasMaxLength(12)
-                .HasColumnName("phone");
             entity.Property(e => e.PostalCode)
                 .HasMaxLength(12)
                 .HasColumnName("postal_code");
@@ -277,9 +270,6 @@ public partial class MyrmidonContext : DbContext
             entity.Property(e => e.Surname)
                 .HasMaxLength(100)
                 .HasColumnName("surname");
-            entity.Property(e => e.UserType)
-                .HasDefaultValueSql("'Patient'")
-                .HasColumnType("enum('Patient','Therapist')");
         });
 
         OnModelCreatingPartial(modelBuilder);

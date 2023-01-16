@@ -6,7 +6,7 @@ public class Patient
 
     public string? MedicalHistory { get; set; }
 
-    public Guid UserId { get; set; }
+    public Guid Id { get; set; }
 
     public virtual User User { get; set; } = null!;
 

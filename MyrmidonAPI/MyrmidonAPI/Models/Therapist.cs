@@ -4,7 +4,7 @@ public class Therapist
 {
     public Guid TherapistId { get; set; }
 
-    public Guid UserId { get; set; }
+    public Guid Id { get; set; }
 
     public virtual User User { get; set; } = null!;
 

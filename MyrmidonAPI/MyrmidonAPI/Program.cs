@@ -1,4 +1,6 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using MyrmidonAPI.Services.UserService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +19,18 @@ builder.Services.AddDbContext<MyrmidonContext>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
 });
 
+builder.Services.AddIdentity<User, IdentityRole<Guid>>(options =>
+    {
+        options.Password.RequireDigit = true;
+        options.Password.RequireLowercase = true;
+        options.Password.RequireNonAlphanumeric = true;
+        options.Password.RequireUppercase = true;
+        options.Password.RequiredLength = 6;
+        options.User.RequireUniqueEmail = true;
+    })
+    .AddEntityFrameworkStores<MyrmidonContext>()
+    .AddDefaultTokenProviders();
+
 
 var app = builder.Build();
 
@@ -29,7 +43,12 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+
+app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseCors(corsPolicyBuilder => corsPolicyBuilder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+app.UseCookiePolicy(new CookiePolicyOptions { MinimumSameSitePolicy = SameSiteMode.None });
 
 app.MapControllers();
 

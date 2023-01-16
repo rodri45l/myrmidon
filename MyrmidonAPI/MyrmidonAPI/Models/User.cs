@@ -1,8 +1,19 @@
-﻿namespace MyrmidonAPI.Models;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Identity;
 
-public class User
+namespace MyrmidonAPI.Models;
+
+public class User : IdentityUser<Guid>
 {
-    public Guid UserId { get; set; }
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    public override Guid Id
+    {
+        get => base.Id;
+        set => base.Id = value;
+    }
+    // Guid UserId { get; set; }
 
     public string Name { get; set; } = null!;
 
@@ -12,19 +23,11 @@ public class User
 
     public string PostalCode { get; set; } = null!;
 
-    public string Email { get; set; } = null!;
-
     public string Address { get; set; } = null!;
-
-    public string Phone { get; set; } = null!;
 
     public bool Sex { get; set; }
 
     public string? Gender { get; set; }
-
-    public string? Password { get; set; }
-
-    public string UserType { get; set; } = null!;
 
     public bool Deleted { get; set; }
 
@@ -34,7 +37,7 @@ public class User
 
     public virtual ICollection<Patient> Patients { get; } = new List<Patient>();
 
-    public virtual SessionToken? SessionToken { get; set; }
+    // public virtual ICollection<SessionToken> SessionTokens { get; } = new List<SessionToken>();
 
     public virtual ICollection<Tension> Tensions { get; } = new List<Tension>();
 
