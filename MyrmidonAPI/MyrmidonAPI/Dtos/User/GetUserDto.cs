@@ -3,7 +3,7 @@ namespace MyrmidonAPI.Dtos.User;
 public class GetUserDto
 {
     public Guid UserId { get; set; }
-    
+
     public string Name { get; set; } = null!;
 
     public string Surname { get; set; } = null!;

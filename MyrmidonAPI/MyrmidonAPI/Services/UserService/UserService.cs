@@ -10,7 +10,7 @@ public class UserService : IUserService
     private readonly MyrmidonContext _dbContext;
     private readonly IMapper _mapper;
     private readonly UserManager<User> _userManager;
-    
+
 
     // Constructor
     public UserService(UserManager<User> userManager, IMapper mapper, MyrmidonContext dbContext)
@@ -22,18 +22,17 @@ public class UserService : IUserService
 
     public async Task<ServiceResponse<IActionResult>> RegisterUser(AddUserDto addUserDto)
     {
-        
         var user = _mapper.Map<User>(addUserDto);
         var serviceResponse = new ServiceResponse<IActionResult>();
-        
-        if (addUserDto.Password ==null)
+
+        if (addUserDto.Password == null)
         {
             serviceResponse.Data = new BadRequestObjectResult("Null password");
             serviceResponse.Success = false;
             return serviceResponse;
         }
-        
-        
+
+
         var result = await _userManager.CreateAsync(user
             ,
             addUserDto.Password
@@ -44,6 +43,7 @@ public class UserService : IUserService
             serviceResponse.Success = false;
             return serviceResponse;
         }
+
         addUserDto.Password = null;
         serviceResponse.Data = new CreatedResult("", addUserDto);
 

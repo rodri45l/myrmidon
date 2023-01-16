@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿namespace MyrmidonAPI.Models;
 
-namespace MyrmidonAPI.Models;
-
-public partial class JournalEntry
+public class JournalEntry
 {
     public int JournalEntryId { get; set; }
 

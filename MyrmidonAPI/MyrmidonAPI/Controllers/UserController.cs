@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MyrmidonAPI.Services.UserService;
 
@@ -10,26 +9,14 @@ public class UserController : Controller
 {
     // private readonly MyrmidonContext _dbContext;
     private readonly IUserService _userService;
-    
 
-    public UserController(   IUserService userService)
+
+    public UserController(IUserService userService)
     {
         _userService = userService;
-        
     }
-
-    /*
-    [HttpGet("{userId:guid}")]
-    public async Task<IActionResult> GetUser(Guid userId)
-    {
-        var serviceResponse = await _userService.GetUser(userId);
-
-        if (!serviceResponse.Success) return NotFound();
-
-        return Ok(serviceResponse.Data);
-    }*/
     
-    
+
     /*{
         "name": "rodrigo",
         "surname": "Lara",
@@ -48,22 +35,13 @@ public class UserController : Controller
     [HttpPost]
     public async Task<IActionResult> RegisterUser(AddUserDto addUserDto)
     {
-        if (!ModelState.IsValid)
-        {
-            return BadRequest(ModelState);
-        }
+        if (!ModelState.IsValid) return BadRequest(ModelState);
 
         var result = await _userService.RegisterUser(addUserDto);
         if (result.Data == null) return BadRequest("Something went wrong");
 
         return result.Data;
-
-
-        /*var serviceResponse = await _userService.AddUser(addUserDto);
-        if (serviceResponse.Success == false || serviceResponse.Data == null)
-            return BadRequest(serviceResponse.Message);
-        var (location, newUser) = serviceResponse.Data;
-        return Created(location, newUser);*/
+        
     }
 
     /*[HttpDelete("{userId:guid}")]

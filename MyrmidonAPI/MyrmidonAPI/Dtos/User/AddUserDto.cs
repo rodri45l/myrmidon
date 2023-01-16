@@ -19,7 +19,7 @@ public class AddUserDto
     public bool Sex { get; set; } // True for female, False for male.
 
     public string? Gender { get; set; }
-    
+
     public virtual string? UserName { get; set; }
     public string? Password { get; set; }
 }

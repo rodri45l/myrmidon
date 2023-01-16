@@ -11,7 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
- builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 builder.Services.AddDbContext<MyrmidonContext>(options =>
 {
@@ -30,7 +30,6 @@ builder.Services.AddIdentity<User, IdentityRole<Guid>>(options =>
     })
     .AddEntityFrameworkStores<MyrmidonContext>()
     .AddDefaultTokenProviders();
-
 
 
 var app = builder.Build();

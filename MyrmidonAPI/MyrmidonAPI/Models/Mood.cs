@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿namespace MyrmidonAPI.Models;
 
-namespace MyrmidonAPI.Models;
-
-public partial class Mood
+public class Mood
 {
     public int MoodId { get; set; }
 
