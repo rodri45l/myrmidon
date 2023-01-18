@@ -1,7 +1,4 @@
-using Microsoft.AspNetCore.Identity;
-using Moq;
-
-namespace TestMyrmidonAPI;
+namespace TestMyrmidonAPI.MockClasses;
 
 public static class IdentityMockHelper
 {
