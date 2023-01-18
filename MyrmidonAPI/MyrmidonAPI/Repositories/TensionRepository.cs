@@ -27,7 +27,7 @@ public class TensionRepository : ITensionRepository
     }
     
 
-    public async Task<ServiceResponse<IEnumerable<Tension>>> GetAllAsync(Guid userId)
+    public async Task<ServiceResponse<IEnumerable<Tension>>> GetAllByUserIdAsync(Guid userId)
     {
         var serviceResponse = new ServiceResponse<IEnumerable<Tension>>();
         var tensions = await _myrmidonContext.Tensions.Where(t => t.Id == userId).ToListAsync();

@@ -7,11 +7,20 @@
   <component name="ChangeListManager">
     <list default="true" id="9a0a6cf6-88ef-4a62-9102-83f74efe9a4e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyrmidonAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyrmidonAPI/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/AppointmentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/AppointmentRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/FactRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/FactRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/IAppointmentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/IAppointmentRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/IFactRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/IFactRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/IJournalEntryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/IJournalEntryRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/IMoodRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/IMoodRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/IPatientRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/IPatientRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/ITensionRespository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/ITensionRespository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/ITherapistRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/ITherapistRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/JournalEntryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/JournalEntryRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/MoodRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/MoodRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/PatientRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/PatientRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/TensionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/TensionRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/TherapistRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/TherapistRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

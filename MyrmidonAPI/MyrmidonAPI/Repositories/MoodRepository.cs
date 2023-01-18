@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using MyrmidonAPI.Models.OtherModels;
 using MyrmidonAPI.Repositories.Interfaces;
 
@@ -5,28 +7,84 @@ namespace MyrmidonAPI.Repositories;
 
 public class MoodRepository : IMoodRepository
 {
-    public async Task<ServiceResponse<Mood>> GetByIdAsync(int id)
+    private readonly MyrmidonContext _myrmidonContext;
+
+    public MoodRepository(MyrmidonContext myrmidonContext)
     {
-        throw new NotImplementedException();
+        _myrmidonContext = myrmidonContext;
     }
 
-    public async Task<ServiceResponse<IEnumerable<Mood>>> GetAllAsync(Guid userId)
+    public async Task<ServiceResponse<Mood>> GetByIdAsync(int id)
     {
-        throw new NotImplementedException();
+        var serviceResponse = new ServiceResponse<Mood>();
+        var mood = await _myrmidonContext.Moods.FindAsync(id);
+
+        if (mood == null) serviceResponse.Success = false;
+        else serviceResponse.Data = mood;
+        
+        return serviceResponse;
+    }
+
+    public async Task<ServiceResponse<IEnumerable<Mood>>> GetAllByUserIdAsync(Guid userId)
+    {
+        var serviceResponse = new ServiceResponse<IEnumerable<Mood>>();
+        var moods = await _myrmidonContext.Moods.Where(t => t.Id == userId).ToListAsync();
+        if (moods.IsNullOrEmpty()) serviceResponse.Success = false;
+        else serviceResponse.Data = moods;
+        return serviceResponse;
     }
 
     public async Task<Result> AddAsync(Mood mood)
     {
-        throw new NotImplementedException();
+        var result = new Result();
+        try
+        {
+            await _myrmidonContext.Moods.AddAsync(mood);
+            await _myrmidonContext.SaveChangesAsync();
+            result.Success = true;
+        }
+        catch (Exception ex)
+        {
+            result.Success = false;
+            result.Error = ex.Message;
+        }
+
+        return result;
     }
 
     public async Task<Result> UpdateAsync(Mood mood)
     {
-        throw new NotImplementedException();
+        var result = new Result();
+        try
+        {
+             _myrmidonContext.Moods.Update(mood);
+            await _myrmidonContext.SaveChangesAsync();
+            result.Success = true;
+        }
+        catch (Exception ex)
+        {
+            result.Success = false;
+            result.Error = ex.Message;
+        }
+
+        return result;
     }
 
     public async Task<Result> DeleteAsync(Mood mood)
     {
-        throw new NotImplementedException();
+        var result = new Result();
+        try
+        {
+            _myrmidonContext.Moods.Remove(mood);
+            await _myrmidonContext.SaveChangesAsync();
+            result.Success = true;
+        }
+        catch (Exception ex)
+        {
+            result.Success = false;
+            result.Error = ex.Message;
+        }
+
+        return result;
     }
 }
