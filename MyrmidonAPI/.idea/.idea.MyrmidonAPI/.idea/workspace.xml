@@ -7,56 +7,11 @@
   <component name="ChangeListManager">
     <list default="true" id="9a0a6cf6-88ef-4a62-9102-83f74efe9a4e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyrmidonAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyrmidonAPI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Controllers/UserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Migrations/MyrmidonContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Migrations/MyrmidonContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Models/MyrmidonContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Models/MyrmidonContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Models/SessionToken.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Models/SessionToken.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Models/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/MyrmidonAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/MyrmidonAPI.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Services/UserService/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Services/UserService/IUserAuthenticationService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Services/UserService/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Services/UserService/UserAuthenticationService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/bin/Debug/net7.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/bin/Debug/net7.0/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/ref/MyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/ref/MyrmidonAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/refint/MyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/refint/MyrmidonAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/MyrmidonAPI.csproj.EntityFrameworkCore.targets" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/MyrmidonAPI.csproj.EntityFrameworkCore.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/MyrmidonAPI.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/MyrmidonAPI.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/MyrmidonAPI.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/MyrmidonAPI.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/MyrmidonAPI.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/MyrmidonAPI.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/TestMyrmidonAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/TestMyrmidonAPI.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/UserTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/UserTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/TestMyrmidonAPI.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/TestMyrmidonAPI.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/TestMyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/TestMyrmidonAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/TestMyrmidonAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/TestMyrmidonAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/ref/TestMyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/ref/TestMyrmidonAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/refint/TestMyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/refint/TestMyrmidonAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/obj/TestMyrmidonAPI.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/obj/TestMyrmidonAPI.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/IJournalEntryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/IJournalEntryRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/IMoodRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/IMoodRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/IPatientRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/IPatientRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/JournalEntryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/JournalEntryRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/MoodRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/MoodRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,24 +41,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/Old_models",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/rodri45z/Projects/myrmidon/MyrmidonAPI/MyrmidonAPI/Old_models&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "/home/rodri45z/.config/JetBrains/Rider2022.3/resharper-host/DecompilerCache",
-      "/home/rodri45z/.config/JetBrains/Rider2022.3/resharper-host/SourcesCache",
-      "/home/rodri45z/.local/share/Symbols/src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/home/rodri45z/.config/JetBrains/Rider2022.3/resharper-host/DecompilerCache&quot;,
+      &quot;/home/rodri45z/.config/JetBrains/Rider2022.3/resharper-host/SourcesCache&quot;,
+      &quot;/home/rodri45z/.local/share/Symbols/src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.MyrmidonAPI: http">
     <configuration name="MyrmidonAPI: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/MyrmidonAPI/MyrmidonAPI.csproj" />
