@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
 using MyrmidonAPI.Models.OtherModels;
 using MyrmidonAPI.Repositories.Interfaces;
 
@@ -21,8 +20,8 @@ public class UserRepository : IUserRepository
 
         if (user == null) serviceResponse.Success = false;
         else serviceResponse.Data = user;
-        
-        return serviceResponse; 
+
+        return serviceResponse;
     }
 
     public async Task<ServiceResponse<IEnumerable<User>>> GetAllAsync()
@@ -38,10 +37,9 @@ public class UserRepository : IUserRepository
 
     public async Task<Result> AddAsync(User user)
     {
-        
         var result = new Result();
         try
-        {   
+        {
             await _myrmidonContext.Users.AddAsync(user);
             await _myrmidonContext.SaveChangesAsync();
             result.Success = true;
@@ -68,7 +66,6 @@ public class UserRepository : IUserRepository
         {
             result.Error = ex.Message;
             result.Success = false;
-
         }
 
         return result;
@@ -87,7 +84,6 @@ public class UserRepository : IUserRepository
         {
             result.Error = ex.Message;
             result.Success = false;
-
         }
 
         return result;

@@ -7,7 +7,6 @@ namespace MyrmidonAPI.Repositories;
 
 public class TherapistRepository : ITherapistRepository
 {
-
     private readonly MyrmidonContext _myrmidonContext;
 
     public TherapistRepository(MyrmidonContext myrmidonContext)
@@ -22,9 +21,8 @@ public class TherapistRepository : ITherapistRepository
 
         if (therapist == null) serviceResponse.Success = false;
         else serviceResponse.Data = therapist;
-        
+
         return serviceResponse;
-       
     }
 
     public async Task<ServiceResponse<IEnumerable<Therapist>>> GetAllByUserIdAsync(Guid userId)
@@ -34,7 +32,7 @@ public class TherapistRepository : ITherapistRepository
 
         if (therapists.IsNullOrEmpty()) serviceResponse.Success = false;
         else serviceResponse.Data = therapists;
-        
+
         return serviceResponse;
     }
 

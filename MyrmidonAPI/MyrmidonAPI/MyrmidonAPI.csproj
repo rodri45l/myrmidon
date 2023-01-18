@@ -7,49 +7,49 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
-        <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
-        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.2" />
-        <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
-        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.2" />
-        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.2" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0"/>
+        <PackageReference Include="BCrypt.Net-Next" Version="4.0.3"/>
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.2"/>
+        <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0"/>
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.2"/>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.2"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2"/>
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.2">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.2" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.2"/>
         <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.2">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="NLog.Web.AspNetCore" Version="5.2.1" />
-        <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0-silver.1" />
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+        <PackageReference Include="NLog.Web.AspNetCore" Version="5.2.1"/>
+        <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0-silver.1"/>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
     </ItemGroup>
 
     <ItemGroup>
-        <Compile Remove="Services\UserService\UserService2.cs" />
-        <Compile Include="Old_models\Fact.cs" />
-        <Compile Remove="Old_models\**" />
-        <Compile Remove="Services\IJwtService.cs" />
-        <Compile Remove="Services\JwtService.cs" />
+        <Compile Remove="Services\UserService\UserService2.cs"/>
+        <Compile Include="Old_models\Fact.cs"/>
+        <Compile Remove="Old_models\**"/>
+        <Compile Remove="Services\IJwtService.cs"/>
+        <Compile Remove="Services\JwtService.cs"/>
     </ItemGroup>
 
     <ItemGroup>
-        <Folder Include="Migrations" />
+        <Folder Include="Migrations"/>
     </ItemGroup>
 
     <ItemGroup>
-      <EmbeddedResource Remove="Old_models\**" />
+        <EmbeddedResource Remove="Old_models\**"/>
     </ItemGroup>
 
     <ItemGroup>
-      <None Remove="Old_models\**" />
+        <None Remove="Old_models\**"/>
     </ItemGroup>
 
     <ItemGroup>
-      <Content Remove="Old_models\**" />
+        <Content Remove="Old_models\**"/>
     </ItemGroup>
 
 </Project>

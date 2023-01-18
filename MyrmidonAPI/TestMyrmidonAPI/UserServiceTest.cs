@@ -13,9 +13,9 @@ public class UserTest
     private readonly SessionTokenRepository _sessionTokenRepository;
     private readonly SessionTokenService _sessionTokenService;
     private readonly UserManager<User> _userManager;
+    private readonly UserRepository _userRepository;
 
     private readonly List<User> _users;
-    private readonly UserRepository _userRepository;
 
     //  Constructor
     public UserTest()
@@ -40,11 +40,10 @@ public class UserTest
         _mapper = mockMapper.CreateMapper();
 
 
-        
         var options = new DbContextOptionsBuilder<MyrmidonContext>()
             .UseInMemoryDatabase("InMemoryDb")
             .Options;
-     
+
         var userManagerMock = new Mock<UserManager<User>>(
             /* IUserStore<TUser> store */Mock.Of<IUserStore<User>>(),
             /* IOptions<IdentityOptions> optionsAccessor */null,
@@ -118,7 +117,6 @@ public class UserTest
             signInManagerMock.Object, _sessionTokenService);
         _controller = new UserController(_authenticationService);
         _userRepository = new UserRepository(_myrmidonContext);
-        
     }
 
     [Fact]

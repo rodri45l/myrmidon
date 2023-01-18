@@ -21,7 +21,7 @@ public class MoodRepository : IMoodRepository
 
         if (mood == null) serviceResponse.Success = false;
         else serviceResponse.Data = mood;
-        
+
         return serviceResponse;
     }
 
@@ -57,7 +57,7 @@ public class MoodRepository : IMoodRepository
         var result = new Result();
         try
         {
-             _myrmidonContext.Moods.Update(mood);
+            _myrmidonContext.Moods.Update(mood);
             await _myrmidonContext.SaveChangesAsync();
             result.Success = true;
         }

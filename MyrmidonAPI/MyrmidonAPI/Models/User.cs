@@ -37,7 +37,7 @@ public class User : IdentityUser<Guid>
 
     public virtual ICollection<Patient> Patients { get; } = new List<Patient>();
 
-     public virtual ICollection<SessionToken> SessionTokens { get; } = new List<SessionToken>();
+    public virtual ICollection<SessionToken> SessionTokens { get; } = new List<SessionToken>();
 
     public virtual ICollection<Tension> Tensions { get; } = new List<Tension>();
 

@@ -7,29 +7,47 @@
   <component name="ChangeListManager">
     <list default="true" id="9a0a6cf6-88ef-4a62-9102-83f74efe9a4e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyrmidonAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyrmidonAPI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Models/MyrmidonContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Models/MyrmidonContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Controllers/UserController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Dtos/User/UserLoginDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Dtos/User/UserLoginDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Models/SessionToken.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Models/SessionToken.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Models/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/MyrmidonAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/MyrmidonAPI.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/AppointmentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/AppointmentRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/FactRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/FactRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/IAppointmentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/IAppointmentRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/IFactRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/IFactRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/IJournalEntryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/IJournalEntryRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/IMoodRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/IMoodRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/IPatientRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/IPatientRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/ISessionTokenRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/ISessionTokenRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/ITensionRespository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/ITensionRespository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/ITherapistRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/ITherapistRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/IUserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/JournalEntryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/JournalEntryRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/MoodRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/MoodRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/PatientRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/PatientRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/SessionTokenRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/SessionTokenRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/TensionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/TensionRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/TherapistRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/TherapistRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/UserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Services/SessionTokenService/ISessionTokenService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Services/SessionTokenService/ISessionTokenService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Services/SessionTokenService/SessionTokenService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Services/SessionTokenService/SessionTokenService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Services/UserService/UserAuthenticationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Services/UserService/UserAuthenticationService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/ref/MyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/ref/MyrmidonAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/refint/MyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/refint/MyrmidonAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/IdentityMockHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/MockClasses/IdentityMockHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/UserTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/UserServiceTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/MyrmidonAPI.csproj.EntityFrameworkCore.targets" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/MyrmidonAPI.csproj.EntityFrameworkCore.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/MyrmidonAPI.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/MyrmidonAPI.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/MyrmidonAPI.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/MyrmidonAPI.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/MockClasses/IdentityMockHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/MockClasses/IdentityMockHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/MoodRepositoryTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/MoodRepositoryTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/UserRepositoryTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/UserRepositoryTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/UserServiceTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/UserServiceTest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/Usings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/Usings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/TestMyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/TestMyrmidonAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/TestMyrmidonAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/TestMyrmidonAPI.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/ref/TestMyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/ref/TestMyrmidonAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/refint/TestMyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/refint/TestMyrmidonAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -157,25 +175,25 @@
       <expand>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 21% 523/660" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 40% 398/659" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 21% 523/660" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 21% 523/660" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 40% 398/659" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 40% 398/659" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 21% 523/660" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 21% 523/660" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 21% 523/660" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 40% 398/659" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 40% 398/659" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 40% 398/659" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 21% 523/660" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 21% 523/660" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 21% 523/660" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Repositories 11% 490/552" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 40% 398/659" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 40% 398/659" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 40% 398/659" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Repositories 34% 365/551" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
       </expand>
       <select />

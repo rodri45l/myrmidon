@@ -21,7 +21,7 @@ public class AppointmentRepository : IAppointmentRepository
 
         if (appointment == null) serviceResponse.Success = false;
         else serviceResponse.Data = appointment;
-        
+
         return serviceResponse;
     }
 
@@ -68,7 +68,6 @@ public class AppointmentRepository : IAppointmentRepository
         {
             result.Error = ex.Message;
             result.Success = false;
-
         }
 
         return result;
@@ -87,7 +86,6 @@ public class AppointmentRepository : IAppointmentRepository
         {
             result.Error = ex.Message;
             result.Success = false;
-
         }
 
         return result;

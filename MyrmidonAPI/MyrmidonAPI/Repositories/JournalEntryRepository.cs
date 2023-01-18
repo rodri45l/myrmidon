@@ -21,7 +21,7 @@ public class JournalEntryRepository : IJournalEntryRepository
 
         if (journalEntry == null) serviceResponse.Success = false;
         else serviceResponse.Data = journalEntry;
-        
+
         return serviceResponse;
     }
 
@@ -65,7 +65,6 @@ public class JournalEntryRepository : IJournalEntryRepository
         {
             result.Error = ex.Message;
             result.Success = false;
-
         }
 
         return result;
@@ -73,7 +72,6 @@ public class JournalEntryRepository : IJournalEntryRepository
 
     public async Task<Result> DeleteAsync(JournalEntry journalEntry)
     {
-        
         var result = new Result();
         try
         {
@@ -85,7 +83,6 @@ public class JournalEntryRepository : IJournalEntryRepository
         {
             result.Error = ex.Message;
             result.Success = false;
-
         }
 
         return result;

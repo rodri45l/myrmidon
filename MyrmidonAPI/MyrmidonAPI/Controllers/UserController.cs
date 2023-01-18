@@ -15,7 +15,7 @@ public class UserController : Controller
     {
         _userAuthenticationService = userAuthenticationService;
     }
-    
+
 
     /*{
         "name": "rodrigo",
@@ -41,7 +41,6 @@ public class UserController : Controller
         if (result.Data == null) return BadRequest("Something went wrong");
 
         return result.Data;
-        
     }
 
     [HttpPost]

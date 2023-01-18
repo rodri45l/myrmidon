@@ -21,7 +21,7 @@ public class PatientRepository : IPatientRepository
 
         if (patient == null) serviceResponse.Success = false;
         else serviceResponse.Data = patient;
-        
+
         return serviceResponse;
     }
 
@@ -32,7 +32,7 @@ public class PatientRepository : IPatientRepository
 
         if (patients.IsNullOrEmpty()) serviceResponse.Success = false;
         else serviceResponse.Data = patients;
-        
+
         return serviceResponse;
     }
 
@@ -59,7 +59,7 @@ public class PatientRepository : IPatientRepository
         var result = new Result();
         try
         {
-           _myrmidonContext.Patients.Update(patient);
+            _myrmidonContext.Patients.Update(patient);
             await _myrmidonContext.SaveChangesAsync();
             result.Success = true;
         }

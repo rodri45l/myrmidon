@@ -2,7 +2,6 @@ using MyrmidonAPI.Models.OtherModels;
 
 namespace MyrmidonAPI.Repositories.Interfaces;
 
-
 public interface ISessionTokenRepository
 {
     public Task<Result> StoreSessionToken(SessionToken sessionToken);
@@ -11,5 +10,4 @@ public interface ISessionTokenRepository
     public string CreateSessionCacheAsync(string userId);
     public string GetUserIdBySessionCacheAsync(string sessionId);
     public void RemoveCacheSessionId(string sessionId);
-
 }

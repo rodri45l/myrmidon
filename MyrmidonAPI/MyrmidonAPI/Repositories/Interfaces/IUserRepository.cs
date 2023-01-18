@@ -6,7 +6,7 @@ public interface IUserRepository
 {
     public Task<ServiceResponse<User>> GetByIdAsync(Guid id);
     public Task<ServiceResponse<IEnumerable<User>>> GetAllAsync();
-    public Task<Result>  AddAsync(User user);
-    public Task<Result>  UpdateAsync(User user);
-    public Task<Result>  DeleteAsync(User user);
+    public Task<Result> AddAsync(User user);
+    public Task<Result> UpdateAsync(User user);
+    public Task<Result> DeleteAsync(User user);
 }

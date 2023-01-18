@@ -1,10 +1,5 @@
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
 using MyrmidonAPI.Models.OtherModels;
 using MyrmidonAPI.Services.SessionTokenService;
 
@@ -15,22 +10,23 @@ public sealed class UserAuthenticationService : IUserAuthenticationService
     // Database context
     private readonly MyrmidonContext _dbContext;
     private readonly IMapper _mapper;
-    private readonly UserManager<User> _userManager;
-    private readonly SignInManager<User> _signInManager;
 
     private readonly ISessionTokenService _sessionTokenService;
+    private readonly SignInManager<User> _signInManager;
+
+    private readonly UserManager<User> _userManager;
     // private readonly IJwtService _jwtService;
 
 
     // Constructor
-    public UserAuthenticationService(UserManager<User> userManager, IMapper mapper, MyrmidonContext dbContext, SignInManager<User> signInManager, ISessionTokenService sessionTokenService)
+    public UserAuthenticationService(UserManager<User> userManager, IMapper mapper, MyrmidonContext dbContext,
+        SignInManager<User> signInManager, ISessionTokenService sessionTokenService)
     {
         _dbContext = dbContext;
         _mapper = mapper;
         _userManager = userManager;
         _signInManager = signInManager;
         _sessionTokenService = sessionTokenService;
-
     }
 
     public async Task<ServiceResponse<IActionResult>> RegisterUser(AddUserDto addUserDto)
@@ -62,7 +58,7 @@ public sealed class UserAuthenticationService : IUserAuthenticationService
 
         return serviceResponse;
     }
-    
+
 
     public async Task<ServiceResponse<IActionResult>> Login(UserLoginDto loginDto)
     {
@@ -75,32 +71,34 @@ public sealed class UserAuthenticationService : IUserAuthenticationService
             var user = await _userManager.FindByNameAsync(loginDto.UserName);
             var tokenResult = await _sessionTokenService.CreateSessionToken(user);
             var token = tokenResult.Data;
-            
-            
-            
-            serviceResponse.Data = new OkObjectResult(new {token = token.TokenId });
+
+
+            serviceResponse.Data = new OkObjectResult(new { token = token.TokenId });
             serviceResponse.Success = true;
         }
         else if (result.IsLockedOut)
         {
-            serviceResponse.Data = new ObjectResult("User account locked out.") { StatusCode = StatusCodes.Status429TooManyRequests };
+            serviceResponse.Data = new ObjectResult("User account locked out.")
+                { StatusCode = StatusCodes.Status429TooManyRequests };
             serviceResponse.Success = false;
         }
         else if (result.IsNotAllowed)
         {
-            serviceResponse.Data = new ObjectResult("User not allowed to log in.") { StatusCode = StatusCodes.Status403Forbidden };
+            serviceResponse.Data = new ObjectResult("User not allowed to log in.")
+                { StatusCode = StatusCodes.Status403Forbidden };
             serviceResponse.Success = false;
         }
         else
         {
-            serviceResponse.Data = new ObjectResult("Invalid login attempt.") { StatusCode = StatusCodes.Status401Unauthorized };
+            serviceResponse.Data = new ObjectResult("Invalid login attempt.")
+                { StatusCode = StatusCodes.Status401Unauthorized };
             serviceResponse.Success = false;
         }
 
         return serviceResponse;
     }
-    
-    
+
+
     /*private SigningCredentials GetSigningCredentials()
     {
         var jwtConfig = _configuration.GetSection("jwtConfig");

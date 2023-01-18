@@ -8,6 +8,7 @@ namespace MyrmidonAPI.Repositories;
 public class FactRepository : IFactRepository
 {
     private readonly MyrmidonContext _myrmidonContext;
+
     public FactRepository(MyrmidonContext myrmidonContext)
     {
         _myrmidonContext = myrmidonContext;
@@ -20,7 +21,7 @@ public class FactRepository : IFactRepository
 
         if (fact == null) serviceResponse.Success = false;
         else serviceResponse.Data = fact;
-        
+
         return serviceResponse;
     }
 
@@ -64,7 +65,6 @@ public class FactRepository : IFactRepository
         {
             result.Error = ex.Message;
             result.Success = false;
-
         }
 
         return result;
@@ -83,7 +83,6 @@ public class FactRepository : IFactRepository
         {
             result.Error = ex.Message;
             result.Success = false;
-
         }
 
         return result;
