@@ -25,7 +25,7 @@ public partial class MyrmidonContext : IdentityDbContext<User, IdentityRole<Guid
 
     public virtual DbSet<Patient> Patients { get; set; }
 
-    // public virtual DbSet<SessionToken> SessionTokens { get; set; }
+    public virtual DbSet<SessionToken> SessionTokens { get; set; }
 
     public virtual DbSet<Tension> Tensions { get; set; }
 
@@ -179,7 +179,7 @@ public partial class MyrmidonContext : IdentityDbContext<User, IdentityRole<Guid
                     });
         });
 
-        /*modelBuilder.Entity<SessionToken>(entity =>
+        modelBuilder.Entity<SessionToken>(entity =>
         {
             entity.HasKey(e => e.TokenId).HasName("PRIMARY");
 
@@ -193,16 +193,13 @@ public partial class MyrmidonContext : IdentityDbContext<User, IdentityRole<Guid
             entity.Property(e => e.ExpirationTime)
                 .HasColumnType("timestamp")
                 .HasColumnName("expiration_time");
-            entity.Property(e => e.IpAddress)
-                .HasMaxLength(45)
-                .HasColumnName("ip_address");
             entity.Property(e => e.UserId).HasColumnName("userId");
 
             entity.HasOne(d => d.User).WithMany(p => p.SessionTokens)
                 .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("session_tokens_ibfk_1");
-        });*/
+        });
 
         modelBuilder.Entity<Tension>(entity =>
         {

@@ -1,6 +1,6 @@
 ﻿
 
-/*
+
 namespace MyrmidonAPI.Models;
 
 public partial class SessionToken
@@ -11,8 +11,5 @@ public partial class SessionToken
 
     public DateTime ExpirationTime { get; set; }
 
-    public string IpAddress { get; set; } = null!;
-
     public virtual User User { get; set; } = null!;
 }
-*/
