@@ -8,12 +8,12 @@ namespace MyrmidonAPI.Controllers;
 public class UserController : Controller
 {
     // private readonly MyrmidonContext _dbContext;
-    private readonly IUserService _userService;
+    private readonly IUserAuthenticationService _userAuthenticationService;
 
 
-    public UserController(IUserService userService)
+    public UserController(IUserAuthenticationService userAuthenticationService)
     {
-        _userService = userService;
+        _userAuthenticationService = userAuthenticationService;
     }
     
 
@@ -37,11 +37,20 @@ public class UserController : Controller
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
 
-        var result = await _userService.RegisterUser(addUserDto);
+        var result = await _userAuthenticationService.RegisterUser(addUserDto);
         if (result.Data == null) return BadRequest("Something went wrong");
 
         return result.Data;
         
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> LoginUser(UserLoginDto user)
+    {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+
+        var result = await _userAuthenticationService.Login(user);
+        return result.Data ?? BadRequest("Something Went Wrong");
     }
 
     /*[HttpDelete("{userId:guid}")]

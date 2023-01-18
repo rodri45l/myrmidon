@@ -296,6 +296,32 @@ namespace MyrmidonAPI.Migrations
                     b.ToTable("Patient", (string)null);
                 });
 
+            modelBuilder.Entity("MyrmidonAPI.Models.SessionToken", b =>
+                {
+                    b.Property<Guid>("TokenId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)")
+                        .HasColumnName("token_id");
+
+                    b.Property<DateTime>("ExpirationTime")
+                        .HasColumnType("timestamp")
+                        .HasColumnName("expiration_time");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("char(36)")
+                        .HasColumnName("userId");
+
+                    b.HasKey("TokenId")
+                        .HasName("PRIMARY");
+
+                    b.HasIndex(new[] { "TokenId" }, "token_id")
+                        .IsUnique();
+
+                    b.HasIndex(new[] { "UserId" }, "userId");
+
+                    b.ToTable("session_tokens", (string)null);
+                });
+
             modelBuilder.Entity("MyrmidonAPI.Models.Tension", b =>
                 {
                     b.Property<int>("TensionId")
@@ -573,6 +599,17 @@ namespace MyrmidonAPI.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("MyrmidonAPI.Models.SessionToken", b =>
+                {
+                    b.HasOne("MyrmidonAPI.Models.User", "User")
+                        .WithMany("SessionTokens")
+                        .HasForeignKey("UserId")
+                        .IsRequired()
+                        .HasConstraintName("session_tokens_ibfk_1");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("MyrmidonAPI.Models.Tension", b =>
                 {
                     b.HasOne("MyrmidonAPI.Models.User", "User")
@@ -620,6 +657,8 @@ namespace MyrmidonAPI.Migrations
                     b.Navigation("Moods");
 
                     b.Navigation("Patients");
+
+                    b.Navigation("SessionTokens");
 
                     b.Navigation("Tensions");
 

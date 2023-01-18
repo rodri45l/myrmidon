@@ -1,9 +1,19 @@
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Memory;
+using Microsoft.IdentityModel.Tokens;
+using MyrmidonAPI.Repositories;
+using MyrmidonAPI.Repositories.Interfaces;
+using MyrmidonAPI.Services;
+using MyrmidonAPI.Services.SessionTokenService;
 using MyrmidonAPI.Services.UserService;
+using NLog;
 
 var builder = WebApplication.CreateBuilder(args);
-
+var jwtConfig = builder.Configuration.GetSection("jwtConfig");
+var secretKey = jwtConfig["secret"];
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -11,7 +21,16 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
-builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddMemoryCache();
+
+builder.Services.AddScoped<ISessionTokenRepository, SessionTokenRepository>();
+builder.Services.AddScoped<ISessionTokenService, SessionTokenService>();
+builder.Services.AddScoped<IUserAuthenticationService, UserAuthenticationService>();
+
+
+
+
+
 
 builder.Services.AddDbContext<MyrmidonContext>(options =>
 {
@@ -30,6 +49,22 @@ builder.Services.AddIdentity<User, IdentityRole<Guid>>(options =>
     })
     .AddEntityFrameworkStores<MyrmidonContext>()
     .AddDefaultTokenProviders();
+builder.Services.AddAuthentication(opt =>
+{
+    opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(opt => opt.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = jwtConfig["validIssuer"],
+        ValidAudience = jwtConfig["validAudience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey!))
+    }
+    );
+
 
 
 var app = builder.Build();
