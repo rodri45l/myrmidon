@@ -1,6 +1,4 @@
-using System.Runtime.InteropServices.JavaScript;
-
-namespace TestMyrmidonAPI;
+namespace TestMyrmidonAPI.RepositoriesTests;
 
 public class AppointmentRepositoryTests
 {

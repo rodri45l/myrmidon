@@ -1,4 +1,4 @@
-namespace TestMyrmidonAPI;
+namespace TestMyrmidonAPI.RepositoriesTests;
 
 public class JournalRepositoryTests
 {

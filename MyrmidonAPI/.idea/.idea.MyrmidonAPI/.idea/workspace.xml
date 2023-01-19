@@ -7,18 +7,19 @@
   <component name="ChangeListManager">
     <list default="true" id="9a0a6cf6-88ef-4a62-9102-83f74efe9a4e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyrmidonAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyrmidonAPI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/SessionTokenRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/SessionTokenRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/MyrmidonAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/MyrmidonAPI.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/AppointmentRepositoryTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/RepositoriesTests/AppointmentRepositoryTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/FactRepositoryTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/RepositoriesTests/FactRepositoryTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/JournalRepositoryTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/RepositoriesTests/JournalRepositoryTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/MoodRepositoryTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/RepositoriesTests/MoodRepositoryTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/PatientRepositoryTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/RepositoriesTests/PatientRepositoryTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/SessionTokenRepositoryTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/RepositoriesTests/SessionTokenRepositoryTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/TensionRepositoryTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/RepositoriesTests/TensionRepositoryTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/TherapistRepositoryTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/RepositoriesTests/TherapistRepositoryTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/UserRepositoryTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/RepositoriesTests/UserRepositoryTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/UserServiceTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/ServicesTests/UserServiceTest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/TestMyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/TestMyrmidonAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/TestMyrmidonAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/TestMyrmidonAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/TestMyrmidonAPI.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/ref/TestMyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/obj/Debug/net7.0/ref/TestMyrmidonAPI.dll" afterDir="false" />
@@ -38,7 +39,7 @@
     <setting file="file://$PROJECT_DIR$/MyrmidonAPI/Controllers/UserController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MyrmidonAPI/Services/JwtService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MyrmidonAPI/Services/UserService/UserService2.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TestMyrmidonAPI/UserServiceTest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TestMyrmidonAPI/ServicesTests/UserServiceTest.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -149,33 +150,33 @@
       <expand>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 92% 51/645" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 0% 645/645" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 92% 51/645" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 92% 51/645" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 0% 645/645" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 0% 645/645" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 92% 51/645" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 92% 51/645" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 92% 51/645" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 0% 645/645" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 0% 645/645" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 0% 645/645" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 92% 51/645" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 92% 51/645" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 92% 51/645" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Repositories 97% 18/537" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 0% 645/645" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 0% 645/645" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 0% 645/645" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Repositories 0% 537/537" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 92% 51/645" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 92% 51/645" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 92% 51/645" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Repositories 97% 18/537" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="SessionTokenRepository 68% 18/57" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 0% 645/645" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 0% 645/645" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 0% 645/645" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Repositories 0% 537/537" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="SessionTokenRepository 0% 57/57" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
       </expand>
       <select />

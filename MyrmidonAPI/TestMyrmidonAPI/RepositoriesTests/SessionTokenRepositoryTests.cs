@@ -2,10 +2,7 @@ namespace TestMyrmidonAPI;
 
 public class SessionTokenRepositoryTests
 {
-    private readonly MemoryCache _cache;
-    private readonly MemoryCache _cache2;
     private readonly MyrmidonContext _myrmidonContext;
-    private readonly MyrmidonContext _myrmidonContext2;
     private readonly SessionTokenRepository _sessionTokenRepository;
     private readonly SessionTokenRepository _sessionTokenRepository2;
     private readonly User _user;
@@ -13,8 +10,8 @@ public class SessionTokenRepositoryTests
 
     public SessionTokenRepositoryTests()
     {
-        _cache = new MemoryCache(new MemoryCacheOptions());
-        _cache2 = new MemoryCache(new MemoryCacheOptions());
+        var cache = new MemoryCache(new MemoryCacheOptions());
+        var cache2 = new MemoryCache(new MemoryCacheOptions());
         var options = new DbContextOptionsBuilder<MyrmidonContext>()
             .UseInMemoryDatabase("InMemoryDbSess")
             .Options;
@@ -22,9 +19,9 @@ public class SessionTokenRepositoryTests
             .UseInMemoryDatabase("InMemorySessDb2")
             .Options;
         _myrmidonContext = new MyrmidonContext(options);
-        _myrmidonContext2 = new MyrmidonContext(options2);
-        _sessionTokenRepository2 = new SessionTokenRepository(_myrmidonContext2, _cache);
-        _sessionTokenRepository = new SessionTokenRepository(_myrmidonContext, _cache2);
+        var myrmidonContext2 = new MyrmidonContext(options2);
+        _sessionTokenRepository2 = new SessionTokenRepository(myrmidonContext2, cache);
+        _sessionTokenRepository = new SessionTokenRepository(_myrmidonContext, cache2);
         _user = new User
         {
             Name = "Rodrigo",
@@ -147,7 +144,7 @@ public class SessionTokenRepositoryTests
     }
     
     [Fact]
-    public async Task TestGetUserIdBySessionCacheAsync_ShouldFail()
+    public void TestGetUserIdBySessionCacheAsync_ShouldFail()
     {
         var result = _sessionTokenRepository.GetUserIdBySessionCacheAsync("sessionId");
         Assert.True(result == null);
