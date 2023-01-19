@@ -7,14 +7,15 @@
   <component name="ChangeListManager">
     <list default="true" id="9a0a6cf6-88ef-4a62-9102-83f74efe9a4e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyrmidonAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyrmidonAPI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/ITherapistRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/ITherapistRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/TherapistRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/TherapistRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/IPatientRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/Interfaces/IPatientRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyrmidonAPI/Repositories/PatientRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/Repositories/PatientRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/MyrmidonAPI.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/ref/MyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/ref/MyrmidonAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/refint/MyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyrmidonAPI/obj/Debug/net7.0/refint/MyrmidonAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/TherapistRepositoryTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/TherapistRepositoryTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/MyrmidonAPI.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/TestMyrmidonAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestMyrmidonAPI/bin/Debug/net7.0/TestMyrmidonAPI.dll" afterDir="false" />
@@ -151,25 +152,33 @@
       <expand>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 59% 266/651" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 86% 88/643" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 59% 266/651" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 59% 266/651" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 86% 88/643" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 86% 88/643" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 59% 266/651" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 59% 266/651" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 59% 266/651" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 86% 88/643" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 86% 88/643" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 86% 88/643" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 59% 266/651" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 59% 266/651" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MyrmidonAPI 59% 266/651" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Repositories 57% 233/543" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 86% 88/643" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 86% 88/643" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 86% 88/643" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Repositories 90% 55/535" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 86% 88/643" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 86% 88/643" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MyrmidonAPI 86% 88/643" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Repositories 90% 55/535" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="SessionTokenRepository 0% 55/55" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
       </expand>
       <select />

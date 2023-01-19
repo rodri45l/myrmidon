@@ -1,22 +1,22 @@
 namespace TestMyrmidonAPI;
 
-public class TherapistRepositoryTest
+public class PatientRepositoryTests
 {
-    private readonly MyrmidonContext _myrmidonContext;
+     private readonly MyrmidonContext _myrmidonContext;
     private readonly MyrmidonContext _myrmidonContext2;
     private readonly User _testUser;
-    private readonly Therapist _therapist;
-    private readonly TherapistRepository _therapistRepository;
-    private readonly TherapistRepository _therapistRepository2;
+    private readonly Patient _patient;
+    private readonly PatientRepository _patientRepository;
+    private readonly PatientRepository _patientRepository2;
     private readonly User _user;
 
-    public TherapistRepositoryTest()
+    public PatientRepositoryTests()
     {
         var options = new DbContextOptionsBuilder<MyrmidonContext>()
-            .UseInMemoryDatabase("InMemoryDbThera")
+            .UseInMemoryDatabase("InMemoryDbPatient")
             .Options;
         var options2 = new DbContextOptionsBuilder<MyrmidonContext>()
-            .UseInMemoryDatabase("InMemoryDbThera2")
+            .UseInMemoryDatabase("InMemoryDbPatient2")
             .Options;
 
         _testUser = new User
@@ -40,88 +40,88 @@ public class TherapistRepositoryTest
             Gender = "Male",
             PasswordHash = "SecurePassword123@"
         };
-        _therapist = new Therapist
+        _patient = new Patient
         {
-            TherapistId = new Guid(),
+            PatientId = new Guid(),
             Id = _user.Id,
             User = _user
         };
         _myrmidonContext = new MyrmidonContext(options);
         _myrmidonContext2 = new MyrmidonContext(options2);
-        _therapistRepository2 = new TherapistRepository(_myrmidonContext2);
-        _therapistRepository = new TherapistRepository(_myrmidonContext);
+        _patientRepository2 = new PatientRepository(_myrmidonContext2);
+        _patientRepository = new PatientRepository(_myrmidonContext);
     }
 
     [Fact]
     public async Task TestGetByIdAsync_ShouldReturnSuccess()
     {
         await _myrmidonContext.Users.AddAsync(_user);
-        await _myrmidonContext.Therapists.AddAsync(_therapist);
-        var result = await _therapistRepository.GetByIdAsync(_therapist.TherapistId);
+        await _myrmidonContext.Patients.AddAsync(_patient);
+        var result = await _patientRepository.GetByIdAsync(_patient.PatientId);
         Assert.True(result.Success);
-        _myrmidonContext.Therapists.Remove(_therapist);
+        _myrmidonContext.Patients.Remove(_patient);
     }
 
     [Fact]
     public async Task TestGetByIdAsync_ShouldReturnFail()
     {
-        var result = await _therapistRepository.GetByIdAsync(new Guid());
+        var result = await _patientRepository.GetByIdAsync(new Guid());
         Assert.False(result.Success);
     }
 
     [Fact]
     public async Task TestGetByIdAsync_ShouldAddUser()
     {
-        await _myrmidonContext.Therapists.AddAsync(_therapist);
-        var result = await _therapistRepository.GetByIdAsync(_therapist.TherapistId);
+        await _myrmidonContext.Patients.AddAsync(_patient);
+        var result = await _patientRepository.GetByIdAsync(_patient.PatientId);
 
-        Assert.True(result.Data.TherapistId == _therapist.TherapistId);
+        Assert.True(result.Data.PatientId == _patient.PatientId);
     }
 
     [Fact]
     public async Task TestAddAsync_ShouldReturnSuccess()
     {
-        var result = await _therapistRepository.AddAsync(_therapist);
+        var result = await _patientRepository.AddAsync(_patient);
         Assert.True(result.Success);
     }
 
     [Fact]
     public async Task TestAddAsync_ShouldReturnFail()
     {
-        await _therapistRepository.AddAsync(_therapist);
-        var result = await _therapistRepository.AddAsync(new Therapist { TherapistId = _therapist.TherapistId });
-        await _therapistRepository.DeleteAsync(_therapist);
+        await _patientRepository.AddAsync(_patient);
+        var result = await _patientRepository.AddAsync(new Patient { PatientId = _patient.PatientId });
+        await _patientRepository.DeleteAsync(_patient);
         Assert.False(result.Success);
     }
 
     [Fact]
     public async Task TestUpdateAsync_ShouldReturnSuccess()
     {
-        var result = await _therapistRepository.UpdateAsync(_therapist);
+        var result = await _patientRepository.UpdateAsync(_patient);
         Assert.True(result.Success);
     }
 
     [Fact]
     public async Task TestUpdateAsync_ShouldReturnFail()
     {
-        await _therapistRepository.AddAsync(_therapist);
-        var result = await _therapistRepository.UpdateAsync(new Therapist { TherapistId = _therapist.TherapistId });
-        await _therapistRepository.DeleteAsync(_therapist);
+        await _patientRepository.AddAsync(_patient);
+        var result = await _patientRepository.UpdateAsync(new Patient { PatientId = _patient.PatientId });
+        await _patientRepository.DeleteAsync(_patient);
         Assert.False(result.Success);
     }
 
     [Fact]
     public async Task TestDeleteAsync_ShouldReturnSuccess()
     {
-        await _therapistRepository.AddAsync(_therapist);
-        var result = await _therapistRepository.DeleteAsync(_therapist);
+        await _patientRepository.AddAsync(_patient);
+        var result = await _patientRepository.DeleteAsync(_patient);
         Assert.True(result.Success);
     }
 
     [Fact]
     public async Task TestDeleteAsync_ShouldReturnFail()
     {
-        var result = await _therapistRepository.DeleteAsync(new Therapist { TherapistId = _therapist.TherapistId });
+        var result = await _patientRepository.DeleteAsync(new Patient { PatientId = _patient.PatientId });
         Assert.False(result.Success);
     }
 }
