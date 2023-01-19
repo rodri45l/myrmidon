@@ -1,7 +1,4 @@
-using Microsoft.AspNetCore.Identity;
-using Moq;
-
-namespace TestMyrmidonAPI;
+namespace TestMyrmidonAPI.MockClasses;
 
 public static class IdentityMockHelper
 {
@@ -13,15 +10,13 @@ public static class IdentityMockHelper
         mgr.Object.PasswordValidators.Add(new PasswordValidator<TUser>());
 
         mgr.Setup(x => x.DeleteAsync(It.IsAny<TUser>())).ReturnsAsync(IdentityResult.Success);
-        mgr.Setup(x => x.CreateAsync(It.IsAny<TUser>(), It.IsAny<string>())).ReturnsAsync((TUser user, string password) =>
-        {
-            if (string.IsNullOrEmpty(password))
+        mgr.Setup(x => x.CreateAsync(It.IsAny<TUser>(), It.IsAny<string>())).ReturnsAsync(
+            (TUser user, string password) =>
             {
-                return IdentityResult.Failed();
-            }
-            ls.Add(user);
-            return IdentityResult.Success;
-        });
+                if (string.IsNullOrEmpty(password)) return IdentityResult.Failed();
+                ls.Add(user);
+                return IdentityResult.Success;
+            });
         mgr.Setup(x => x.UpdateAsync(It.IsAny<TUser>())).ReturnsAsync(IdentityResult.Success);
 
         return mgr;

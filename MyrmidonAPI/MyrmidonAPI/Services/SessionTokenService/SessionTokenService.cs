@@ -32,7 +32,7 @@ public class SessionTokenService : ISessionTokenService
         serviceResponse.Message = "An error ocurred";
         return serviceResponse;
     }
-    
+
 
     public virtual async Task<ServiceResponse<bool>> DeleteSessionToken(string sessionId)
     {
@@ -44,7 +44,6 @@ public class SessionTokenService : ISessionTokenService
         //return result
         serviceResponse.Success = result.Success;
         return serviceResponse;
-
     }
 
     public virtual async Task<ServiceResponse<User>> CheckSessionToken(string sessionId)

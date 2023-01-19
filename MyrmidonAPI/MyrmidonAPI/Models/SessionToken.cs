@@ -1,9 +1,6 @@
-﻿
+﻿namespace MyrmidonAPI.Models;
 
-
-namespace MyrmidonAPI.Models;
-
-public partial class SessionToken
+public class SessionToken
 {
     public Guid TokenId { get; set; }
 

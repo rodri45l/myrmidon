@@ -41,15 +41,15 @@
     </ItemGroup>
 
     <ItemGroup>
-      <EmbeddedResource Remove="Old_models\**" />
+        <EmbeddedResource Remove="Old_models\**" />
     </ItemGroup>
 
     <ItemGroup>
-      <None Remove="Old_models\**" />
+        <None Remove="Old_models\**" />
     </ItemGroup>
 
     <ItemGroup>
-      <Content Remove="Old_models\**" />
+        <Content Remove="Old_models\**" />
     </ItemGroup>
 
 </Project>
