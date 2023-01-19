@@ -31,10 +31,11 @@ public class SessionTokenRepository : ISessionTokenRepository
 
     public async Task<ServiceResponse<User>> CheckSessionToken(string sessionId)
     {
+        var newSessionId = Guid.Parse(sessionId);
         var serviceResponse = new ServiceResponse<User>();
         try
         {
-            var sessionToken = await _dbContext.SessionTokens.FindAsync(sessionId);
+            var sessionToken = await _dbContext.SessionTokens.FindAsync(newSessionId);
             if (sessionToken == null)
             {
                 serviceResponse.Success = false;
@@ -57,9 +58,10 @@ public class SessionTokenRepository : ISessionTokenRepository
 
     public async Task<Result> DeleteSessionToken(string sessionId)
     {
+        var newSessionId = Guid.Parse(sessionId);
         try
         {
-            var sessionToRemove = await _dbContext.SessionTokens.FindAsync(sessionId);
+            var sessionToRemove = await _dbContext.SessionTokens.FindAsync(newSessionId);
             _dbContext.SessionTokens.Remove(sessionToRemove!);
             await _dbContext.SaveChangesAsync();
             return new Result { Success = true };
