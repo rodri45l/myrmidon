@@ -14,7 +14,7 @@ public class TherapistRepository : ITherapistRepository
         _myrmidonContext = myrmidonContext;
     }
 
-    public async Task<ServiceResponse<Therapist>> GetByIdAsync(int id)
+    public async Task<ServiceResponse<Therapist>> GetByIdAsync(Guid id)
     {
         var serviceResponse = new ServiceResponse<Therapist>();
         var therapist = await _myrmidonContext.Therapists.FindAsync(id);
@@ -25,16 +25,6 @@ public class TherapistRepository : ITherapistRepository
         return serviceResponse;
     }
 
-    public async Task<ServiceResponse<IEnumerable<Therapist>>> GetAllByUserIdAsync(Guid userId)
-    {
-        var serviceResponse = new ServiceResponse<IEnumerable<Therapist>>();
-        var therapists = await _myrmidonContext.Therapists.Where(t => t.Id == userId).ToListAsync();
-
-        if (therapists.IsNullOrEmpty()) serviceResponse.Success = false;
-        else serviceResponse.Data = therapists;
-
-        return serviceResponse;
-    }
 
     public async Task<Result> AddAsync(Therapist therapist)
     {
