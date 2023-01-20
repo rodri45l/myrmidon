@@ -1,6 +1,8 @@
+using MyrmidonAPI.Dtos;
 using MyrmidonAPI.Dtos.Fact;
 using MyrmidonAPI.Dtos.JournalEntry;
 using MyrmidonAPI.Dtos.Mood;
+using MyrmidonAPI.Dtos.Patient;
 
 namespace MyrmidonAPI;
 
@@ -16,5 +18,6 @@ public class AutoMapperProfile : Profile
         CreateMap<AddFactDto, Fact>();
         CreateMap<AddMoodDto, Mood>();
         CreateMap<AddJournalEntryDto, JournalEntry>();
+        CreateMap<AddPatientDto, Patient>();
     }
 }
