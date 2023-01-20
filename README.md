@@ -1,3 +1,3 @@
 # myrmidon
 
-Project mmyrmidon private repository
+Project myrmidon private repository
