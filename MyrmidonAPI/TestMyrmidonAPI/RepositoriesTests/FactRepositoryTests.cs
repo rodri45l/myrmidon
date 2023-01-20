@@ -14,10 +14,10 @@ public class FactRepositoryTests
     public FactRepositoryTests()
     {
         var options = new DbContextOptionsBuilder<MyrmidonContext>()
-            .UseInMemoryDatabase("InMemoryDb")
+            .UseInMemoryDatabase("InMemoryFactDb")
             .Options;
         var options2 = new DbContextOptionsBuilder<MyrmidonContext>()
-            .UseInMemoryDatabase("InMemoryDb2")
+            .UseInMemoryDatabase("InMemoryFactDb2")
             .Options;
 
 
@@ -91,7 +91,7 @@ public class FactRepositoryTests
     [Fact]
     public async Task TestAddAsync_ShouldReturnSuccess()
     {
-        var result = await _factRepository.AddAsync(_testFact);
+        var result = await _factRepository2.AddAsync(_testFact);
         Assert.True(result.Success);
     }
 

@@ -14,10 +14,10 @@ public class JournalRepositoryTests
     public JournalRepositoryTests()
     {
         var options = new DbContextOptionsBuilder<MyrmidonContext>()
-            .UseInMemoryDatabase("InMemoryDb")
+            .UseInMemoryDatabase("InMemoryDb32")
             .Options;
         var options2 = new DbContextOptionsBuilder<MyrmidonContext>()
-            .UseInMemoryDatabase("InMemoryDb3")
+            .UseInMemoryDatabase("InMemoryDb33")
             .Options;
 
 
@@ -128,8 +128,9 @@ public class JournalRepositoryTests
         _testJournal.Id = user.Id;
         _testJournal.User = user;
 
-        await _myrmidonContext2.Users.AddAsync(user);
-        var result = await _journalRepository2.AddAsync(_testJournal);
+        await _myrmidonContext.Users.AddAsync(user);
+        await _journalRepository.DeleteAsync(_testJournal);
+        var result = await _journalRepository.AddAsync(_testJournal);
         
         Assert.True(result.Success);
     }
@@ -173,10 +174,10 @@ public class JournalRepositoryTests
             Sex = false,
             Gender = "null"
         };
-        await _myrmidonContext.Users.AddAsync(user);
+        await _myrmidonContext2.Users.AddAsync(user);
         _testJournal.User = user;
-        await _journalRepository.AddAsync(_testJournal);
-        var result = await _journalRepository.UpdateAsync(_testJournal);
+        await _journalRepository2.AddAsync(_testJournal);
+        var result = await _journalRepository2.UpdateAsync(_testJournal);
         Assert.True(result.Success);
     }
 

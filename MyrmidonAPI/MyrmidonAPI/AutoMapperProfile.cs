@@ -1,3 +1,5 @@
+using MyrmidonAPI.Dtos.Fact;
+
 namespace MyrmidonAPI;
 
 public class AutoMapperProfile : Profile
@@ -9,5 +11,6 @@ public class AutoMapperProfile : Profile
             opt => opt.DoNotValidate());
         CreateMap<UpdateUserDto, User>();
         CreateMap<GetUserDto, UpdateUserDto?>();
+        CreateMap<Fact, AddFactDto>();
     }
 }
