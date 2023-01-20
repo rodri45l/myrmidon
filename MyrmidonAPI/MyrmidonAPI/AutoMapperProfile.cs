@@ -1,5 +1,5 @@
-using MyrmidonAPI.Dtos;
 using MyrmidonAPI.Dtos.Fact;
+using MyrmidonAPI.Dtos.JournalEntry;
 using MyrmidonAPI.Dtos.Mood;
 
 namespace MyrmidonAPI;
@@ -13,8 +13,8 @@ public class AutoMapperProfile : Profile
             opt => opt.DoNotValidate());
         CreateMap<UpdateUserDto, User>();
         CreateMap<GetUserDto, UpdateUserDto?>();
-        CreateMap<Fact, AddFactDto>();
-        CreateMap<Mood, AddMoodDto>();
-        
+        CreateMap<AddFactDto, Fact>();
+        CreateMap<AddMoodDto, Mood>();
+        CreateMap<AddJournalEntryDto, JournalEntry>();
     }
 }

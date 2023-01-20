@@ -38,6 +38,9 @@
 
     <ItemGroup>
         <Folder Include="Migrations" />
+        <Folder Include="Services\AppointmentService" />
+        <Folder Include="Services\PatientService" />
+        <Folder Include="Services\TherapistSevice" />
     </ItemGroup>
 
     <ItemGroup>
