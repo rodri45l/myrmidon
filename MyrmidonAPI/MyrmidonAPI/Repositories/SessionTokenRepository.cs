@@ -80,10 +80,19 @@ public class SessionTokenRepository : ISessionTokenRepository
         return sessionId;
     }
 
-    public string GetUserIdBySessionCacheAsync(string sessionId)
+    public async Task<ServiceResponse<User>> GetUserBySessionCacheAsync(string sessionId)
     {
-        if (_memoryCache.TryGetValue(sessionId, out string? userId)) return userId;
-        return null;
+        var serviceResponse = new ServiceResponse<User>();
+        var cacheCheck = _memoryCache.TryGetValue(sessionId, out string? userId);
+        if (cacheCheck)
+        {
+            var user = await _dbContext.Users.FindAsync(Guid.Parse(userId));
+            serviceResponse.Data = user;
+        }
+        else serviceResponse.Success = false;
+
+        
+        return serviceResponse;
     }
 
     public void RemoveCacheSessionId(string sessionId)

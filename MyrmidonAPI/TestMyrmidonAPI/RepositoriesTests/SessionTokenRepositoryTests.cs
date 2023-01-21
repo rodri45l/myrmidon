@@ -123,30 +123,21 @@ public class SessionTokenRepositoryTests
         Assert.False(result.Success);
     }
 
-    [Fact]
-    public void TestCreateSessionCacheAsync_ShouldReturnSessionId()
-    {
-        var guid = Guid.NewGuid();
-        var result = _sessionTokenRepository.CreateSessionCacheAsync(guid.ToString());
-        var checkResult = _sessionTokenRepository.GetUserIdBySessionCacheAsync(result);
-
-        Assert.True(checkResult == guid.ToString());
-    }
-
+    
     [Fact]
     public async Task TestGetUserIdBySessionCacheAsync_ShouldSuccess()
     {
         await _myrmidonContext.Users.AddAsync(_user);
         var sessionId = _sessionTokenRepository.CreateSessionCacheAsync(_user.Id.ToString());
-        var result = _sessionTokenRepository.GetUserIdBySessionCacheAsync(sessionId);
-        Assert.True(result == _user.Id.ToString());
+        var checkResult = await _sessionTokenRepository.GetUserBySessionCacheAsync(sessionId);
+        Assert.True(checkResult.Data.Id.ToString() == _user.Id.ToString());
     }
 
     [Fact]
-    public void TestGetUserIdBySessionCacheAsync_ShouldFail()
+    public async Task TestGetUserIdBySessionCacheAsync_ShouldFail()
     {
-        var result = _sessionTokenRepository.GetUserIdBySessionCacheAsync("sessionId");
-        Assert.True(result == null);
+        var result = await _sessionTokenRepository.GetUserBySessionCacheAsync("sessionId");
+        Assert.False(result.Success);
     }
 
 
