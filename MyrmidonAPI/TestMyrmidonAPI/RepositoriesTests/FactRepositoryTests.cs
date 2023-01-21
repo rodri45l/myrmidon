@@ -2,7 +2,7 @@ namespace TestMyrmidonAPI.RepositoriesTests;
 
 public class FactRepositoryTests
 {
-     private readonly Fact _fact;
+    private readonly Fact _fact;
     private readonly FactRepository _factRepository;
     private readonly FactRepository _factRepository2;
 
@@ -14,10 +14,10 @@ public class FactRepositoryTests
     public FactRepositoryTests()
     {
         var options = new DbContextOptionsBuilder<MyrmidonContext>()
-            .UseInMemoryDatabase("InMemoryDb")
+            .UseInMemoryDatabase("InMemoryFactDb")
             .Options;
         var options2 = new DbContextOptionsBuilder<MyrmidonContext>()
-            .UseInMemoryDatabase("InMemoryDb2")
+            .UseInMemoryDatabase("InMemoryFactDb2")
             .Options;
 
 
@@ -25,14 +25,12 @@ public class FactRepositoryTests
         {
             FactId = 3,
             Fact1 = string.Empty,
-            LastShown = DateTime.Now,
-
-
+            LastShown = DateTime.Now
         };
 
-        _fact = new Fact()
+        _fact = new Fact
         {
-            FactId = 3,
+            FactId = 3
         };
         _myrmidonContext = new MyrmidonContext(options);
         _myrmidonContext2 = new MyrmidonContext(options2);
@@ -91,7 +89,7 @@ public class FactRepositoryTests
     [Fact]
     public async Task TestAddAsync_ShouldReturnSuccess()
     {
-        var result = await _factRepository.AddAsync(_testFact);
+        var result = await _factRepository2.AddAsync(_testFact);
         Assert.True(result.Success);
     }
 

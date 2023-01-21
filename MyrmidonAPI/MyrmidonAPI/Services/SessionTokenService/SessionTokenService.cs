@@ -48,6 +48,13 @@ public class SessionTokenService : ISessionTokenService
 
     public virtual async Task<ServiceResponse<User>> CheckSessionToken(string sessionId)
     {
+        var cacheSessionId =await _sessionTokenRepository.GetUserBySessionCacheAsync(sessionId);
+        if (cacheSessionId.Success)
+        {
+            return cacheSessionId;
+        }
+
+
         return await _sessionTokenRepository.CheckSessionToken(sessionId);
     }
 }

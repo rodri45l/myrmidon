@@ -2,12 +2,12 @@ namespace TestMyrmidonAPI;
 
 public class PatientRepositoryTests
 {
-     private readonly MyrmidonContext _myrmidonContext;
+    private readonly MyrmidonContext _myrmidonContext;
     private readonly MyrmidonContext _myrmidonContext2;
-    private readonly User _testUser;
     private readonly Patient _patient;
     private readonly PatientRepository _patientRepository;
     private readonly PatientRepository _patientRepository2;
+    private readonly User _testUser;
     private readonly User _user;
 
     public PatientRepositoryTests()

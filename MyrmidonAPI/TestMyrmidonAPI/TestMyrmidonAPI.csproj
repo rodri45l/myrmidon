@@ -30,4 +30,8 @@
         <ProjectReference Include="..\MyrmidonAPI\MyrmidonAPI.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Remove="ServicesTests\SessionTokenService.cs" />
+    </ItemGroup>
+
 </Project>

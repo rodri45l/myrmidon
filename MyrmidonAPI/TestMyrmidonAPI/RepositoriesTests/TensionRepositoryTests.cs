@@ -2,12 +2,11 @@ namespace TestMyrmidonAPI;
 
 public class TensionRepositoryTests
 {
+    private readonly MyrmidonContext _myrmidonContext;
+    private readonly MyrmidonContext _myrmidonContext2;
     private readonly Tension _tension;
     private readonly TensionRepository _tensionRepository;
     private readonly TensionRepository _tensionRepository2;
-
-    private readonly MyrmidonContext _myrmidonContext;
-    private readonly MyrmidonContext _myrmidonContext2;
     private readonly Tension _testTension;
 
 

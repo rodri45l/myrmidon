@@ -14,10 +14,10 @@ public class JournalRepositoryTests
     public JournalRepositoryTests()
     {
         var options = new DbContextOptionsBuilder<MyrmidonContext>()
-            .UseInMemoryDatabase("InMemoryDb")
+            .UseInMemoryDatabase("InMemoryDb32")
             .Options;
         var options2 = new DbContextOptionsBuilder<MyrmidonContext>()
-            .UseInMemoryDatabase("InMemoryDb3")
+            .UseInMemoryDatabase("InMemoryDb33")
             .Options;
 
 
@@ -30,9 +30,9 @@ public class JournalRepositoryTests
             User = new User()
         };
 
-        _journal = new JournalEntry()
+        _journal = new JournalEntry
         {
-            JournalEntryId = 0,
+            JournalEntryId = 0
         };
         _myrmidonContext = new MyrmidonContext(options);
         _myrmidonContext2 = new MyrmidonContext(options2);
@@ -46,7 +46,7 @@ public class JournalRepositoryTests
         await _journalRepository.AddAsync(_testJournal);
 
         var result = await _journalRepository.GetByIdAsync(_testJournal.JournalEntryId);
-        
+
         Assert.True(result.Success);
         _myrmidonContext.JournalEntries.Remove(_testJournal);
     }
@@ -128,9 +128,10 @@ public class JournalRepositoryTests
         _testJournal.Id = user.Id;
         _testJournal.User = user;
 
-        await _myrmidonContext2.Users.AddAsync(user);
-        var result = await _journalRepository2.AddAsync(_testJournal);
-        
+        await _myrmidonContext.Users.AddAsync(user);
+        await _journalRepository.DeleteAsync(_testJournal);
+        var result = await _journalRepository.AddAsync(_testJournal);
+
         Assert.True(result.Success);
     }
 
@@ -173,10 +174,10 @@ public class JournalRepositoryTests
             Sex = false,
             Gender = "null"
         };
-        await _myrmidonContext.Users.AddAsync(user);
+        await _myrmidonContext2.Users.AddAsync(user);
         _testJournal.User = user;
-        await _journalRepository.AddAsync(_testJournal);
-        var result = await _journalRepository.UpdateAsync(_testJournal);
+        await _journalRepository2.AddAsync(_testJournal);
+        var result = await _journalRepository2.UpdateAsync(_testJournal);
         Assert.True(result.Success);
     }
 
@@ -188,5 +189,4 @@ public class JournalRepositoryTests
         var result = await _journalRepository.UpdateAsync(_testJournal);
         Assert.False(result.Success);
     }
-    
 }
