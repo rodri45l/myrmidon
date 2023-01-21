@@ -26,6 +26,7 @@ public class MoodService : IMoodService
         if (!result.Success) return new ServiceResponse<IActionResult>()
         {
             Success = false, Data =new BadRequestObjectResult("Something went wrong")
+            ,Message = result.Error
         };
         return new ServiceResponse<IActionResult>() { Data = new OkObjectResult("Mood created") };
     }

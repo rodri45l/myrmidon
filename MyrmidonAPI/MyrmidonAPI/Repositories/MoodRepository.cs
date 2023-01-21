@@ -40,8 +40,19 @@ public class MoodRepository : IMoodRepository
         try
         {
             await _myrmidonContext.Moods.AddAsync(mood);
-            await _myrmidonContext.SaveChangesAsync();
-            result.Success = true;
+            var state = _myrmidonContext.Entry(mood).State;
+            if (state == EntityState.Added) {
+                await _myrmidonContext.SaveChangesAsync();
+                result.Success = true;
+            }
+            else
+            {
+                result.Success = false;
+                result.Error = "Mood not valid";
+
+            }
+
+
         }
         catch (Exception ex)
         {
