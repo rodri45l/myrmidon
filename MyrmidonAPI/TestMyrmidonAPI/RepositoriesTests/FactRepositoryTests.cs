@@ -2,7 +2,7 @@ namespace TestMyrmidonAPI.RepositoriesTests;
 
 public class FactRepositoryTests
 {
-     private readonly Fact _fact;
+    private readonly Fact _fact;
     private readonly FactRepository _factRepository;
     private readonly FactRepository _factRepository2;
 
@@ -25,14 +25,12 @@ public class FactRepositoryTests
         {
             FactId = 3,
             Fact1 = string.Empty,
-            LastShown = DateTime.Now,
-
-
+            LastShown = DateTime.Now
         };
 
-        _fact = new Fact()
+        _fact = new Fact
         {
-            FactId = 3,
+            FactId = 3
         };
         _myrmidonContext = new MyrmidonContext(options);
         _myrmidonContext2 = new MyrmidonContext(options2);

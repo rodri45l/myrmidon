@@ -6,10 +6,10 @@ namespace TestMyrmidonAPI;
 public class TensionServiceTest
 {
     private readonly IMapper _mapper;
+    private readonly MyrmidonContext _myrmidonContext;
     private readonly Tension _tension;
     private readonly TensionRepository _tensionRepository;
     private readonly TensionService _tensionService;
-    private readonly MyrmidonContext _myrmidonContext;
     private readonly Tension _testTension;
 
     public TensionServiceTest()
@@ -149,5 +149,4 @@ public class TensionServiceTest
         var result = await _tensionService.RemoveTension(tension.TensionId);
         Assert.True(result.Success);
     }
-    
 }

@@ -30,9 +30,9 @@ public class JournalRepositoryTests
             User = new User()
         };
 
-        _journal = new JournalEntry()
+        _journal = new JournalEntry
         {
-            JournalEntryId = 0,
+            JournalEntryId = 0
         };
         _myrmidonContext = new MyrmidonContext(options);
         _myrmidonContext2 = new MyrmidonContext(options2);
@@ -46,7 +46,7 @@ public class JournalRepositoryTests
         await _journalRepository.AddAsync(_testJournal);
 
         var result = await _journalRepository.GetByIdAsync(_testJournal.JournalEntryId);
-        
+
         Assert.True(result.Success);
         _myrmidonContext.JournalEntries.Remove(_testJournal);
     }
@@ -131,7 +131,7 @@ public class JournalRepositoryTests
         await _myrmidonContext.Users.AddAsync(user);
         await _journalRepository.DeleteAsync(_testJournal);
         var result = await _journalRepository.AddAsync(_testJournal);
-        
+
         Assert.True(result.Success);
     }
 
@@ -189,5 +189,4 @@ public class JournalRepositoryTests
         var result = await _journalRepository.UpdateAsync(_testJournal);
         Assert.False(result.Success);
     }
-    
 }

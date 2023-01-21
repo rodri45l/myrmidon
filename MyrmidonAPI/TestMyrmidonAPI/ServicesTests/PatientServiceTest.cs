@@ -5,19 +5,17 @@ namespace TestMyrmidonAPI;
 
 public class PatientServiceTest
 {
-        
     private readonly IMapper _mapper;
+    private readonly MyrmidonContext _myrmidonContext;
     private readonly Patient _patient;
     private readonly PatientRepository _patientRepository;
     private readonly PatientService _patientService;
-    private readonly MyrmidonContext _myrmidonContext;
-    private readonly User _user;
     private readonly Patient _testPatient;
+    private readonly User _user;
 
 
     public PatientServiceTest()
     {
-
         var mockMapper = new MapperConfiguration(cfg => { cfg.AddProfile(new AutoMapperProfile()); });
         _mapper = mockMapper.CreateMapper();
         var options = new DbContextOptionsBuilder<MyrmidonContext>()
@@ -144,5 +142,4 @@ public class PatientServiceTest
         var result = await _patientService.RemovePatient(patient.PatientId);
         Assert.True(result.Success);
     }
-    
 }

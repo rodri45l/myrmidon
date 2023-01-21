@@ -5,10 +5,10 @@ namespace TestMyrmidonAPI;
 
 public class JournalEntryServiceTest
 {
-    private readonly IMapper _mapper;
     private readonly JournalEntry _journalEntry;
     private readonly JournalEntryRepository _journalEntryRepository;
     private readonly JournalEntryService _journalEntryService;
+    private readonly IMapper _mapper;
     private readonly MyrmidonContext _myrmidonContext;
     private readonly JournalEntry _testJournalEntry;
 
@@ -104,7 +104,7 @@ public class JournalEntryServiceTest
             JournalEntryId = 36,
             JournalEntry1 = "asdfasdf",
             Date = DateTime.Now,
-            Id = Guid.NewGuid(),
+            Id = Guid.NewGuid()
         };
         await _journalEntryRepository.AddAsync(journalEntry);
 
@@ -116,7 +116,7 @@ public class JournalEntryServiceTest
     [Fact]
     public async Task TestUpdateJournalEntry_ShouldReturnFail()
     {
-        var journalEntry =  _testJournalEntry;
+        var journalEntry = _testJournalEntry;
 
         var result = await _journalEntryService.UpdateJournalEntry(journalEntry);
         Assert.False(result.Success);
@@ -137,7 +137,7 @@ public class JournalEntryServiceTest
             JournalEntryId = 32,
             JournalEntry1 = "asdfasdf",
             Date = DateTime.Now,
-            Id = Guid.NewGuid(),
+            Id = Guid.NewGuid()
         };
         await _journalEntryRepository.AddAsync(journalEntry);
         var result = await _journalEntryService.RemoveJournalEntry(journalEntry.JournalEntryId);

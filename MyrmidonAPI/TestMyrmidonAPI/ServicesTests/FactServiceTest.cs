@@ -5,12 +5,12 @@ namespace TestMyrmidonAPI;
 
 public class FactServiceTest
 {
-    private readonly IMapper _mapper;
-    private readonly MyrmidonContext _myrmidonContext;
+    private readonly Fact _fact;
     private readonly FactRepository _factRepository;
     private readonly FactService _factService;
+    private readonly IMapper _mapper;
+    private readonly MyrmidonContext _myrmidonContext;
     private readonly Fact _testFact;
-    private readonly Fact _fact;
 
     public FactServiceTest()
     {
@@ -21,7 +21,7 @@ public class FactServiceTest
             .Options;
         _myrmidonContext = new MyrmidonContext(options);
         _factRepository = new FactRepository(_myrmidonContext);
-        _factService = new FactService( _factRepository, _mapper);
+        _factService = new FactService(_factRepository, _mapper);
         _testFact = new Fact
         {
             FactId = 3,
@@ -30,8 +30,8 @@ public class FactServiceTest
         };
         _fact = new Fact();
     }
-    
-    
+
+
     [Fact]
     public async Task TestGetByFact_ShouldReturnSuccess()
     {
@@ -75,8 +75,7 @@ public class FactServiceTest
         var fact = new AddFactDto
         {
             Fact1 = "adfasdfasdf",
-            LastShown = DateTime.Now,
-            
+            LastShown = DateTime.Now
         };
         var result = await _factService.AddFact(fact);
         Assert.IsType<OkObjectResult>(result.Data);
@@ -88,8 +87,7 @@ public class FactServiceTest
         var fact = new AddFactDto
         {
             Fact1 = "adfasdfasdf",
-            LastShown = DateTime.Now,
-            
+            LastShown = DateTime.Now
         };
         var result = await _factService.AddFact(fact);
         Assert.True(result.Success);
@@ -130,6 +128,4 @@ public class FactServiceTest
         var result = await _factService.RemoveFact(fact.FactId);
         Assert.True(result.Success);
     }
-    
-    
 }

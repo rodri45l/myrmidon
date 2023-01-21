@@ -122,7 +122,7 @@ public class SessionTokenRepositoryTests
         var result = await _sessionTokenRepository.DeleteSessionToken(Guid.NewGuid().ToString());
         Assert.False(result.Success);
     }
-    
+
     [Fact]
     public void TestCreateSessionCacheAsync_ShouldReturnSessionId()
     {
@@ -140,17 +140,16 @@ public class SessionTokenRepositoryTests
         var sessionId = _sessionTokenRepository.CreateSessionCacheAsync(_user.Id.ToString());
         var result = _sessionTokenRepository.GetUserIdBySessionCacheAsync(sessionId);
         Assert.True(result == _user.Id.ToString());
-
     }
-    
+
     [Fact]
     public void TestGetUserIdBySessionCacheAsync_ShouldFail()
     {
         var result = _sessionTokenRepository.GetUserIdBySessionCacheAsync("sessionId");
         Assert.True(result == null);
     }
-    
-    
+
+
     [Fact]
     public async Task TestRemoveCacheSessionId_ShouldSuccess()
     {
@@ -160,9 +159,4 @@ public class SessionTokenRepositoryTests
         var result = await _sessionTokenRepository.CheckSessionToken(sessionId);
         Assert.False(result.Success);
     }
-
-    
-
-
-    
 }

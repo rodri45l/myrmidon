@@ -2,12 +2,12 @@ namespace TestMyrmidonAPI;
 
 public class UserRepositoryTest
 {
-    private readonly User _user;
-    private readonly UserRepository _userRepository;
-    private readonly UserRepository _userRepository2;
     private readonly MyrmidonContext _myrmidonContext;
     private readonly MyrmidonContext _myrmidonContext2;
     private readonly User _testUser;
+    private readonly User _user;
+    private readonly UserRepository _userRepository;
+    private readonly UserRepository _userRepository2;
 
 
     public UserRepositoryTest()

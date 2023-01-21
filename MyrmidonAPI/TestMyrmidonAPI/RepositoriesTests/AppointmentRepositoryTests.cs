@@ -2,8 +2,7 @@ namespace TestMyrmidonAPI.RepositoriesTests;
 
 public class AppointmentRepositoryTests
 {
-    
-     private readonly Appointment _appointment;
+    private readonly Appointment _appointment;
     private readonly AppointmentRepository _appointmentRepository;
     private readonly AppointmentRepository _appointmentRepository2;
 
@@ -21,7 +20,6 @@ public class AppointmentRepositoryTests
         var options2 = new DbContextOptionsBuilder<MyrmidonContext>()
             .UseInMemoryDatabase("InMemoryDbApp2")
             .Options;
-        
 
 
         _testAppointment = new Appointment
@@ -46,9 +44,9 @@ public class AppointmentRepositoryTests
             Gender = "Male",
             PasswordHash = "SecurePassword123@"
         };
-        _appointment = new Appointment()
+        _appointment = new Appointment
         {
-            AppointmentId = 3,
+            AppointmentId = 3
         };
         _myrmidonContext = new MyrmidonContext(options);
         _myrmidonContext2 = new MyrmidonContext(options2);
@@ -89,14 +87,12 @@ public class AppointmentRepositoryTests
     [Fact]
     public async Task TestGetAllByUserIdAsync_ShouldReturnSuccess()
     {
-        
         await _myrmidonContext2.Users.AddAsync(_user);
         _testAppointment.Users.Add(_user);
         await _appointmentRepository2.AddAsync(_testAppointment);
 
         var result = _appointmentRepository2.GetAllByUserIdAsync(_user.Id);
         Assert.True(result.Success);
-        
     }
 
     [Fact]
